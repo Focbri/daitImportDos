@@ -1,0 +1,66 @@
+---
+// ImplanteSeccion.astro
+import sbtc from "../../../assets/Logos/sbtc_Logo.png";
+import hidro from "../../../assets/Logos/hidrofilicidad_Logo.png";
+import sterile from "../../../assets/Logos/sterile_Logo.png";
+
+const { title, subtitle, imageSrc, bannerImage, description, features = [], fichaLink, cotizarLink } = Astro.props;
+---
+
+<section class="w-full flex flex-col justify-center items-center lg:pt-16 pt-4">
+    <div class="flex lg:flex-row flex-col justify-center items-center gap-4 lg:w-[80%] w-[90%]">
+        <div class="lg:w-[60%] w-[90%] p-2">
+            <img src={imageSrc} alt={title}>
+        </div>
+        <div class="p-2 lg:w-[40%] w-full flex flex-col gap-8">
+            <div class="text-[#fff] lg:text-6xl text-4xl">
+                <h3 class="font-bold">{title}</h3>
+                <h3>{subtitle}</h3>
+            </div>
+            <div>
+                <img src={bannerImage} alt="">
+            </div>
+            <div class="text-[#adadad]">
+                <span class="font-bold">{description}</span>
+                <ul class="mt-2">
+                    {features.length > 0 ? (
+                        features.map((feature) => (
+                            <li>{feature}</li>
+                        ))
+                    ) : (
+                        <li>No hay características disponibles.</li>
+                    )}
+                </ul>
+            </div>
+            <div class="w-full flex justify-center p-4 gap-6 text-[#fff]">
+                <a href={fichaLink} class="border border-[#ff9a02] rounded py-2 px-4 lg:px-8 hover:bg-[#ff9a02]">Ficha Técnica</a>
+                <a href={cotizarLink} class="border border-[#ff6a02] rounded py-2 px-4 lg:px-8 hover:bg-[#ff6a02]">Cotizar Producto</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="w-full justify-center items-center flex gap-4 flex-col lg:py-4 pt-4">
+    <div class="flex items-center lg:flex-row flex-col justify-center lg:gap-4 gap-2 w-[80%] border-t border-[#282828]">
+        <div class="p-2 flex justify-center flex-col text-center lg:gap-4 gap-1">
+            <div class="w-full flex justify-center">
+                <img src={sbtc.src} alt="" class="w-[50%]">
+            </div>
+            <h3 class="text-[#fff] font-bold text-2xl">Nanoestructuras SBTC</h3>
+            <p class="text-[#adadad]">La estructura del recubrimiento SBTC acelera y promueve activamente la fijación y retención de los osteoblastos, facilitando así la osteointegración.</p>
+        </div>
+        <div class="p-2 flex justify-center flex-col text-center gap-4">
+            <div class="w-full flex justify-center">
+                <img src={hidro.src} alt="">
+            </div>
+            <h3 class="text-[#fff] font-bold text-2xl">Hidrofilicidad</h3>
+            <p class="text-[#adadad]">Gracias a la superficie hidrófila SBTC se acelera la atracción sanguínea y la formación ósea.</p>
+        </div>
+        <div class="p-2 flex justify-center flex-col text-center gap-4">
+            <div class="w-full flex justify-center">
+                <img src={sterile.src} alt="" class="w-[65%]">
+            </div>
+            <h3 class="text-[#fff] font-bold text-2xl">Paquete de implantes estériles</h3>
+            <p class="text-[#adadad]">Tecnología única con sistema de envase doble vial, garantiza la esterilidad del implante y la hidrofilicidad de su superficie.</p>
+        </div>
+    </div>
+</section>

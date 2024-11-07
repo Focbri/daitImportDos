@@ -1,0 +1,65 @@
+---
+import Header from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+	title: string;
+}
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{Astro.props.title}</title>
+	</head>
+	<body>
+		<Header />
+		<slot />
+		<Footer />
+	</body>
+</html>
+
+<style is:global>
+	html {
+		background: #000;
+	}
+
+	@font-face {
+		font-family: "HelveticaNeue";
+		src: url("/font/HelveticaNeueThin.otf") format("truetype");
+		font-weight: 300;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: "HelveticaNeue";
+		src: url("/font/HelveticaNeueItalic.ttf") format("truetype");
+		font-weight: 300;
+		font-style: italic;
+	}
+
+	@font-face {
+		font-family: "HelveticaNeue";
+		src: url("/font/HelveticaNeueBold.otf") format("truetype");
+		font-weight: 700;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: "HelveticaNeue";
+		src: url("/font/HelveticaNeueBoldItalic.otf") format("truetype");
+		font-weight: 700;
+		font-style: italic;
+	}
+
+	body {
+		font-family: "HelveticaNeue", sans-serif;
+		margin: 0;
+		color: #fff;
+	}
+</style>

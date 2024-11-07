@@ -1,0 +1,22 @@
+---
+import fondoTxt from "../assets/fondoTxt.png";
+import slider from "../assets/slider2.png";
+---
+
+<section class="flex flex-col lg:flex-row items-center justify-center gap-12 w-full bg-[#fff] text-[#ff6a02] ">
+  <!-- Contenedor de la primera imagen con el texto superpuesto -->
+  <div class=" w-full flex flex-col items-center lg:items-start text-center lg:text-left relative">
+    <img src={fondoTxt.src} alt="Fondo" class="w-full">
+    
+    <!-- Texto superpuesto con sombra -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <h2 class="text-3xl lg:text-6xl font-bold drop-shadow-2xl lg:w-1/2">Accesorios Protésicos</h2>
+    </div>
+    
+  </div>
+
+  <!-- Segunda imagen visible en pantallas grandes -->
+  <div class="lg:w-2/3 w-full hidden lg:block">
+    <img src={slider.src} alt="Concentrador oxigeno" class="w-full h-full object-cover">
+  </div>
+</section>

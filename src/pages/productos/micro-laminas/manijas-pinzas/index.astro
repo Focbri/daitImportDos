@@ -1,0 +1,41 @@
+---
+import s1305 from "../../../../assets/Productos/microlaminas/s1305.png";
+import s1310 from "../../../../assets/Productos/microlaminas/s1310.png";
+import s1320 from "../../../../assets/Productos/microlaminas/s1320.png";
+import s1330 from "../../../../assets/Productos/microlaminas/s1330.png";
+import s1350 from "../../../../assets/Productos/microlaminas/s1350.png";
+import s1360 from "../../../../assets/Productos/microlaminas/s1360.png";
+import Layout from "../../../../layouts/Layout.astro";
+
+// Array de productos
+const productos = [
+  { id: 1, nombre: "s1305", descripcion: "Corte transversal con pinza", imagen: s1305.src, enlace: "/productos/sistema-implantes/implante-p5d-matrix" },
+  { id: 2, nombre: "s1310", descripcion: "Mango 10cm", imagen: s1310.src, enlace: "/productos/sistema-implantes/implante-p5g-matrix" },
+  { id: 3, nombre: "s1320", descripcion: "Mango 15cm", imagen: s1320.src, enlace: "/productos/sistema-implantes/implante-p7d-matrix" },
+  { id: 4, nombre: "s1330", descripcion: "Mango hexagonal de 10 cm", imagen: s1330.src, enlace: "/productos/sistema-implantes/implante-p1d" },
+  { id: 5, nombre: "s1350", descripcion: "Mango 13cm", imagen: s1350.src, enlace: "/productos/sistema-implantes/implante-p7s" },
+  { id: 6, nombre: "s1360", descripcion: "Mango de 13 cm para trabajo pesado", imagen: s1360.src, enlace: "/productos/sistema-implantes/implante-p7n" }
+];
+---
+
+<Layout title="Micro Láminas">
+  <section class="h-full flex flex-col items-center lg:gap-8 gap-6 w-full border-t border-[#282828] lg:py-16 py-8">
+    <h2 class="lg:text-7xl text-3xl text-[#fff] w-[80%] text-center">Manijas y Pinzas</h2>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:py-10 lg:w-[80%] w-[90%]">
+        <!-- Bucle Astro para productos -->
+        {productos.map((producto) => (
+          <div class="flex flex-col text-[#ff9a02] w-full">
+            <a href={producto.enlace} class="w-full transition-transform duration-300 ease-in-out transform hover:scale-105">
+              <img src={producto.imagen} alt={producto.nombre} />
+            </a>
+            <div class="flex justify-center flex-col py-4 w-full">
+              <h4 class="lg:text-lg font-bold w-[80%] text-center">{producto.nombre}</h4>
+              <span class="text-[#adadad] text-base">{producto.descripcion}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+  </section>
+</Layout>

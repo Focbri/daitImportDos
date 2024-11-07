@@ -1,0 +1,34 @@
+---
+import ctgImplantes from "../assets/Productos/implantes/implantesDental.png";
+import ctgDispMedicos from "../assets/Productos/dispMedicos/dispMedicos.png";
+import ctgDental from "../assets/Productos/microlaminas/dental.png";
+import ctgMedicamentos from "../assets/Productos/medicamentos/lidocaina.png";
+import ctgProdSanitarios from "../assets/Productos/prodSanitarios/prodSanitarios.png";
+
+const productos = [
+  { nombre: "Implantes Dental", imagen: ctgImplantes, enlace: "/productos/sistema-implantes" },
+  { nombre: "Micro Láminas", imagen: ctgDental, enlace: "/productos/micro-laminas" },
+  { nombre: "Disp. Médicos", imagen: ctgDispMedicos, enlace: "/productos/dispositivos-medicos" },
+  { nombre: "Medicamentos", imagen: ctgMedicamentos, enlace: "/productos/medicamentos" },
+  { nombre: "Prod. Sanitarios", imagen: ctgProdSanitarios, enlace: "/productos/prod-sanitarios" }
+];
+---
+
+<section id="ctg-productos" class="w-full flex flex-col gap-6 bg-[#fff] py-14">
+  <div class="w-full text-[#000] flex justify-center">
+    <h2 class="lg:text-4xl text-3xl border-b-2 border-[#282828] w-[90%] lg:w-[84%] text-center">Nuestros Productos</h2>
+  </div>
+  
+  <div class="w-full lg:gap-4 gap-3 flex justify-center flex-wrap text-[#fff] text-lg">
+    {productos.map((producto) => (
+      <a href={producto.enlace} class="flex flex-col items-center border border-[#001037] lg:w-[20%] w-[45%] rounded-[4px] overflow-hidden">
+        <div class="bg-[#001037] w-full text-center py-1">
+          <h3>{producto.nombre}</h3>
+        </div>
+        <div class="w-full bg-[#fff] flex justify-center hover:bg-[#ff6a02] hover:opacity-85 transition-colors duration-300">
+          <img src={producto.imagen.src} alt={producto.nombre} class="w-full" />
+        </div>
+      </a>
+    ))}
+  </div>
+</section>

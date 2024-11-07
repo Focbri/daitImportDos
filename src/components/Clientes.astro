@@ -1,0 +1,33 @@
+---
+import esSalud from "../assets/Clientes/essalud.png";
+import minsa from "../assets/Clientes/minsa.png";
+import solidaridad from "../assets/Clientes/solidaridad.png";
+import clinicaSP from "../assets/Clientes/clinicaSP.png";
+import clinicaI from "../assets/Clientes/clinicaInternacional.png";
+import hospital from "../assets/Clientes/hospitalFondo.png";
+import unmsm from "../assets/Clientes/unmsm.png";
+import uNorbertW from "../assets/Clientes/uNorbertWiener.png";
+import uSMP from "../assets/Clientes/usmp.png";
+
+const clientes = [esSalud, minsa, solidaridad, clinicaSP, clinicaI, unmsm, uNorbertW, uSMP];
+---
+
+<section id="clientes" class="h-full flex flex-col items-center gap-4 w-full bg-[#000] my-10 py-4">
+  <h2 class="lg:text-4xl text-3xl text-[#fff] border-b-2 border-[#282828] w-[90%] lg:w-[84%] text-center">Nuestros Clientes Potenciales</h2>
+  
+  <div class="w-[85%] grid lg:grid-cols-2 gap-4">
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-2 lg:py-10">
+      {clientes.map((cliente) => (
+        <img 
+          src={cliente.src} 
+          alt="cliente" 
+          class="border rounded-lg grayscale-0 lg:grayscale lg:hover:grayscale-0 hover:shadow-[0px_4px_15px_rgba(255,255,255,0.5)]"
+        />
+      ))}
+    </div>
+
+    <div class="w-full hidden lg:flex justify-center items-center">
+      <img src={hospital.src} alt="hospital" class="w-full rounded-lg" />
+    </div>
+  </div>
+</section>

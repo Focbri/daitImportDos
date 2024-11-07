@@ -1,0 +1,38 @@
+---
+// Page1.astro
+import Layout from "../../../layouts/Layout.astro";
+import ImplanteSeccion from "../../productos/sistema-implantes/ImplanteSeccion.astro"
+import p5gM from "../../../assets/Productos/implantes/P5G_matrix_1.png";
+import bannerLogo from "../../../assets/Productos/implantes/implante_logos_banner.png";
+
+const title = "P5G";
+const subtitle = "Implante de nivel tisular Matrix";
+const description = "P5G es nuestro implante a nivel de tejido. Su estabilidad inicial junto con su excelente conservación ósea generan resultados exitosos.";
+const features = [
+    "– Alivio de estrés – Estabilidad cortical superior",
+    "– Paso medio",
+    "– Colector óseo",
+    "– Conexión cónica",
+    "– Microanillos",
+    "– Ápice seguro",
+    "– Plataforma cónica",
+    "– Material de titanio de grado 5",
+    "– Superficie: SBTC – Recubrimiento trabecular bioactivo inteligente",
+];
+
+const fichaLink = "/productos/sistema-implantes/p5d-ficha";
+const cotizarLink = "/productos/sistema-implantes/p5d-cotizacion";
+---
+
+<Layout title="Implante P5G - Sistema de Implantes">
+    <ImplanteSeccion
+        title={title}
+        subtitle={subtitle}
+        imageSrc={p5gM.src}
+        bannerImage={bannerLogo.src}
+        description={description}
+        features={features}
+        fichaLink={fichaLink}
+        cotizarLink={cotizarLink}
+    />
+</Layout>

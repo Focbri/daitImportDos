@@ -1,0 +1,37 @@
+---
+import mr1 from "../../../../assets/Productos/microlaminas/mr1.png";
+import mr2 from "../../../../assets/Productos/microlaminas/mr2.png";
+import mr3 from "../../../../assets/Productos/microlaminas/mr3.png";
+import mr6 from "../../../../assets/Productos/microlaminas/mr6.png";
+import Layout from "../../../../layouts/Layout.astro";
+
+// Array de productos
+const productos = [
+  { id: 1, nombre: "MR1", descripcion: "Redondo, 5 mm, en ángulo de 30°", imagen: mr1.src, enlace: "/productos/sistema-implantes/implante-p5d-matrix" },
+  { id: 2, nombre: "MR2", descripcion: "Redondo, 3 mm, en ángulo de 30°", imagen: mr2.src, enlace: "/productos/sistema-implantes/implante-p5g-matrix" },
+  { id: 3, nombre: "MR3", descripcion: "Lados rectos, medianos, en ángulo de 30°", imagen: mr3.src, enlace: "/productos/sistema-implantes/implante-p7d-matrix" },
+  { id: 4, nombre: "MR6", descripcion: "Lados rectos, grandes, en ángulo de 30°", imagen: mr6.src, enlace: "/productos/sistema-implantes/implante-p1d" }
+];
+---
+
+<Layout title="Micro Láminas">
+  <section class="h-full flex flex-col items-center lg:gap-8 gap-6 w-full border-t border-[#282828] lg:py-16 py-8">
+    <h2 class="lg:text-7xl text-3xl text-[#fff] w-[80%] text-center">Espejos</h2>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:py-10 lg:w-[80%] w-[90%]">
+        <!-- Bucle Astro para productos -->
+        {productos.map((producto) => (
+          <div class="flex flex-col text-[#ff9a02] w-full">
+            <a href={producto.enlace} class="w-full transition-transform duration-300 ease-in-out transform hover:scale-105">
+              <img src={producto.imagen} alt={producto.nombre} />
+            </a>
+            <div class="flex justify-center flex-col py-4 w-full">
+              <h4 class="lg:text-lg font-bold w-[80%] text-center">{producto.nombre}</h4>
+              <span class="text-[#adadad] text-base">{producto.descripcion}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+  </section>
+</Layout>

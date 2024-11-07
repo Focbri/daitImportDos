@@ -1,0 +1,209 @@
+---
+import p5dMatrix from "../../../assets/Productos/implantes/P5D_matrix.png";
+import p5gMatrix from "../../../assets/Productos/implantes/P5G_matrix.png";
+import p7d from "../../../assets/Productos/implantes/P7D.png";
+import p1d from "../../../assets/Productos/implantes/P1D.png";
+import p7s_p9s from "../../../assets/Productos/implantes/p7s_p9s.png";
+import p7n from "../../../assets/Productos/implantes/p7n.png";
+
+import cadCam from "../../../assets/Productos/implantes/cadCam.png";
+import analogicos from "../../../assets/Productos/implantes/analogicos.png";
+import cargaI from "../../../assets/Productos/implantes/cargaInmediata.png";
+import restauracionSobreDent from "../../../assets/Productos/implantes/restauracionSobredentadura.png";
+import transferencias from "../../../assets/Productos/implantes/transferencias.png";
+import tapasCurativas from "../../../assets/Productos/implantes/tapasCurativas.png";
+import restauracionCementada from "../../../assets/Productos/implantes/restauracionCementada.png";
+import kitC from "../../../assets/Productos/implantes/kitComprobacion.png";
+import pilaresFundicion from "../../../assets/Productos/implantes/pilaresFundicion.png";
+import restauracionAtornillada from "../../../assets/Productos/implantes/restauracionAtornillada.png";
+
+import pltConica from "../../../assets/Productos/implantes/pltfConica.png";
+import pltConicaE from "../../../assets/Productos/implantes/pltfConicaEstrecha.png";
+import pltHexagonalI from "../../../assets/Productos/implantes/pltfHexagonalInterna.png";
+import pltUnaPieza from "../../../assets/Productos/implantes/pltfOnePiece.png";
+
+import Layout from "../../../layouts/Layout.astro";
+
+const productos = [
+  { id: 1, nombre: "Implante P5D Matrix", descripcion: "Plataforma Cónica", imagen: p5dMatrix.src, enlace: "/productos/sistema-implantes/implante-p5d-matrix" },
+  { id: 2, nombre: "Implante de Matriz P5G", descripcion: "Plataforma Cónica", imagen: p5gMatrix.src, enlace: "/productos/sistema-implantes/implante-p5g-matrix" },
+  { id: 3, nombre: "Implante P7D", descripcion: "Plataforma Cónica", imagen: p7d.src, enlace: "/productos/sistema-implantes/implante-p7d-matrix" },
+  { id: 4, nombre: "Implante P1D", descripcion: "Plataforma Cónica", imagen: p1d.src, enlace: "/productos/sistema-implantes/implante-p1d" },
+  { id: 5, nombre: "Implantes P7S, P9S", descripcion: "Plataforma de una Pieza", imagen: p7s_p9s.src, enlace: "/productos/sistema-implantes/implante-p7s" },
+  { id: 6, nombre: "Implante P7N", descripcion: "Plataforma Cónica Estrecha", imagen: p7n.src, enlace: "/productos/sistema-implantes/implante-p7n" }
+];
+---
+
+<Layout title="Sistema de Implantes">
+  <div class="min-h-screen flex flex-col justify-center items-center w-full overflow-x-hidden">
+    <section class="flex flex-col items-center gap-6 w-full border-t border-[#282828] lg:py-16 py-8">
+      <h2 class="lg:text-7xl text-3xl text-[#fff] w-[80%] text-center">Sistema de Implantes</h2>
+      <div class="text-[#6f6d6f] lg:w-[80%] w-[90%] lg:text-center text-left lg:text-base text-sm">
+        <p>Los productos comercializados por DAIT Import son implantes dentales y productos protésicos relacionados que cuentan con una sólida experiencia en el mercado y que ofrecemos a un precio competitivo. Hoy en día, miles de profesionales de todo el mundo utilizan nuestros productos a diario. Todos nuestros implantes están fabricados con un material biocompatible: la aleación de titanio 5 de grado médico con una superficie extraordinaria.</p>
+        <span class="font-bold">Todos nuestros productos cumplen con los más estrictos estándares de calidad internacionales.</span>
+      </div>
+
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:py-10 lg:w-[80%] w-[90%]">
+        {productos.map((producto) => (
+          <div class="flex flex-col justify-center items-center text-[#ff9a02] w-full">
+            <a href={producto.enlace} class="w-full transition-transform duration-300 ease-in-out transform hover:scale-105">
+              <img src={producto.imagen} alt={producto.nombre} class="w-full max-w-full h-auto object-cover" />
+            </a>
+            <div class="flex justify-center flex-col py-4 w-full items-center text-center">
+              <h4 class="lg:text-2xl text-xl font-bold w-[80%]">{producto.nombre}</h4>
+              <span class="text-[#adadad] lg:text-lg text-base uppercase">{producto.descripcion}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="flex flex-col items-center justify-center lg:gap-8 gap-6 w-full border-t border-[#282828] lg:py-16 py-8">
+      <div class="w-full flex justify-center flex-col items-center gap-6">
+        <h2 class="lg:text-7xl text-3xl text-[#fff] w-[80%] text-center">Accesorios protésicos</h2>
+        <div class="text-[#8d8b8b] lg:w-[80%] w-[90%] lg:text-center text-left lg:text-base text-sm">
+          <p><span class="font-bold">Dait Import</span> ofrece una amplia gama de accesorios protésicos de alta calidad que complementan nuestros sistemas de implantes. Nuestros accesorios están diseñados para satisfacer las necesidades específicas de cualquier caso clínico, desde restauraciones de dientes unitarios hasta reconstrucciones de arcadas completas. Con nuestras soluciones protésicas, los profesionales dentales pueden lograr resultados funcionales y estéticos óptimos para sus pacientes.</p>
+        </div>
+      </div>
+
+      <div class="w-full flex justify-center my-8">
+        <div class="flex items-center w-[80%]">
+          <hr class="border-t border-[#f3df86] flex-grow">
+          <span class="px-4 text-[#f3df86] text-2xl">Accesorios protésicos</span>
+          <hr class="border-t border-[#f3df86] flex-grow">
+        </div>
+      </div>
+
+      <div class="w-[90%] lg:w-[70%] flex flex-row items-center justify-center gap-4">
+        <!-- Primer contenedor con imágenes en disposición específica -->
+        <div class="grid grid-cols-3 grid-rows-5 w-[50%] gap-1">
+          <!-- Primera fila: dos espacios vacíos y una imagen en la tercera posición -->
+          <div class="col-span-2"></div>
+          <div class="relative row-start-1 col-start-3 group">
+            <a href="URL1" class="block">
+              <img src={cadCam.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
+              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center lg:text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+                CAD-CAM
+              </span>
+            </a>
+          </div>
+      
+          <!-- Segunda fila: imagen en la segunda columna -->
+          <div class="relative row-start-2 col-start-2 group">
+            <a href="URL2" class="block">
+              <img src={analogicos.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
+              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+                Analógicos
+              </span>
+            </a>
+          </div>
+      
+          <!-- Tercera fila: imagen en la primera columna -->
+          <div class="relative row-start-3 col-start-1 group">
+            <a href="URL3" class="block">
+              <img src={cargaI.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
+              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+                Carga Inmmediata
+              </span>
+            </a>
+          </div>
+      
+          <!-- Cuarta fila: imagen en la segunda columna -->
+          <div class="relative row-start-4 col-start-2 group">
+            <a href="URL4" class="block">
+              <img src={restauracionSobreDent.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
+              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+                Restauración de Sobredentadura
+              </span>
+            </a>
+          </div>
+      
+          <!-- Quinta fila: imagen en la tercera columna -->
+          <div class="relative row-start-5 col-start-3 group">
+            <a href="URL5" class="block">
+              <img src={transferencias.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
+              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+                Transferencias
+              </span>
+            </a>
+          </div>
+        </div>
+      
+        <!-- Segundo contenedor con imágenes en disposición específica -->
+        <div class="grid grid-cols-3 grid-rows-5 w-[50%] gap-1">
+          <!-- Primera fila: dos espacios vacíos y una imagen en la tercera posición -->
+          <div class="col-span-2"></div>
+          <div class="relative row-start-1 col-start-1 group">
+            <a href="URL6" class="block">
+              <img src={tapasCurativas.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
+              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+                Tapas Curativas
+              </span>
+            </a>
+          </div>
+      
+          <!-- Segunda fila: imagen en la segunda columna -->
+          <div class="relative row-start-2 col-start-2 group">
+            <a href="URL7" class="block">
+              <img src={restauracionCementada.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
+              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+                Restauración Cementada
+              </span>
+            </a>
+          </div>
+      
+          <!-- Tercera fila: imagen en la primera columna -->
+          <div class="relative row-start-3 col-start-3 group">
+            <a href="URL8" class="block">
+              <img src={kitC.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
+              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+                Kit de Comprobación
+              </span>
+            </a>
+          </div>
+      
+          <!-- Cuarta fila: imagen en la segunda columna -->
+          <div class="relative row-start-4 col-start-2 group">
+            <a href="URL9" class="block">
+              <img src={pilaresFundicion.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
+              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+                Pilares de Fundición
+              </span>
+            </a>
+          </div>
+      
+          <!-- Quinta fila: imagen en la tercera columna -->
+          <div class="relative row-start-5 col-start-1 group">
+            <a href="URL10" class="block">
+              <img src={restauracionAtornillada.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-2">
+              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+                Restauración Atornillada
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full flex justify-center lg:mt-12 my-12">
+        <div class="lg:w-[80%] w-full flex text-[#fff] lg:justify-evenly justify-center uppercase font-semibold gap-4 text-center lg:text-base text-xs">
+          <div class="flex flex-col items-center gap-8 w-[20%]">
+            <img src={pltConica.src} alt="">
+            <span>Plataforma Cónica</span>
+          </div>
+          <div class="flex flex-col  items-center gap-8 w-[20%]">
+            <img src={pltConicaE.src} alt="">
+            <span>Plataforma Cónica Estrecha</span>
+          </div>
+          <div class="flex flex-col  items-center gap-8 w-[20%]">
+            <img src={pltHexagonalI.src} alt="">
+            <span>Plataforma Hexagonal Interna</span>
+          </div>
+          <div class="flex flex-col  items-center gap-8 w-[20%]">
+            <img src={pltUnaPieza.src} alt="">
+            <span>Plataforma de Una Pieza</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

@@ -1,0 +1,45 @@
+---
+import cuchilla_6910 from "../../../../assets/Productos/microlaminas/cuchilla_6910.png";
+import s63 from "../../../../assets/Productos/microlaminas/s6300.png";
+import s64 from "../../../../assets/Productos/microlaminas/s6400.png";
+import s65 from "../../../../assets/Productos/microlaminas/s6500.png";
+import s67 from "../../../../assets/Productos/microlaminas/s6700.png";
+import s69 from "../../../../assets/Productos/microlaminas/s6900.png";
+import s6915 from "../../../../assets/Productos/microlaminas/s6915.png";
+import s6945 from "../../../../assets/Productos/microlaminas/s6945.png";
+import Layout from "../../../../layouts/Layout.astro";
+
+// Array de productos
+const productos = [
+  { id: 1, nombre: "6910", descripcion: "Cuchilla en miniatura con punta redonda y paladar hendido en ángulo", imagen: cuchilla_6910.src, enlace: "/productos/sistema-implantes/implante-p5d-matrix" },
+  { id: 2, nombre: "S-6300", descripcion: "Hoja de lanza, recta", imagen: s63.src, enlace: "/productos/sistema-implantes/implante-p5g-matrix" },
+  { id: 3, nombre: "S-6400", descripcion: "Hoja con borde afilado y punta redondeada", imagen: s64.src, enlace: "/productos/sistema-implantes/implante-p7d-matrix" },
+  { id: 4, nombre: "S-6500", descripcion: "Punta de corte de cuchilla de 15°", imagen: s65.src, enlace: "/productos/sistema-implantes/implante-p1d" },
+  { id: 5, nombre: "S-6700", descripcion: "Punta de radio de hoja en miniatura", imagen: s67.src, enlace: "/productos/sistema-implantes/implante-p7s" },
+  { id: 6, nombre: "S-6900", descripcion: "Hoja afilada de radio completo y lados, bisel doble", imagen: s69.src, enlace: "/productos/sistema-implantes/implante-p7n" },
+  { id: 7, nombre: "S6915", descripcion: "Hoja afilada de radio completo y lados, bisel doble, ángulo de 10°", imagen: s6915.src, enlace: "/productos/sistema-implantes/implante-p7n" },
+  { id: 8, nombre: "S6945", descripcion: "Hoja afilada de radio completo y lados, bisel doble, ángulo de 45°", imagen: s6945.src, enlace: "/productos/sistema-implantes/implante-p7n" }
+];
+---
+
+<Layout title="Micro Láminas">
+  <section class="h-full flex flex-col items-center lg:gap-8 gap-6 w-full border-t border-[#282828] lg:py-16 py-8">
+    <h2 class="lg:text-7xl text-3xl text-[#fff] w-[80%] text-center">Cuchillas en Miniatura</h2>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:py-10 lg:w-[80%] w-[90%]">
+        <!-- Bucle Astro para productos -->
+        {productos.map((producto) => (
+          <div class="flex flex-col text-[#ff9a02] w-full">
+            <a href={producto.enlace} class="w-full transition-transform duration-300 ease-in-out transform hover:scale-105">
+              <img src={producto.imagen} alt={producto.nombre} />
+            </a>
+            <div class="flex justify-center flex-col py-4 w-full">
+              <h4 class="lg:text-lg font-bold w-[80%] text-center">{producto.nombre}</h4>
+              <span class="text-[#adadad] text-base">{producto.descripcion}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+  </section>
+</Layout>

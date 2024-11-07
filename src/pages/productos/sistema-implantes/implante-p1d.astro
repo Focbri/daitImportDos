@@ -1,0 +1,33 @@
+---
+// Page1.astro
+import Layout from "../../../layouts/Layout.astro";
+import ImplanteSeccion from "../../productos/sistema-implantes/ImplanteSeccion.astro"
+import p1d from "../../../assets/Productos/implantes/P1D_rotating.gif";
+import bannerLogo from "../../../assets/Productos/implantes/implante_logos_banner.png";
+
+const title = "P1D";
+const subtitle = "Implante";
+const description = "Implante densamente roscado, extremadamente beneficioso para hueso duro (mandibular, D1 y D2), con plataforma Shift y conexión cónica.";
+const features = [
+    "– Excelente estabilidad primaria",
+    "– Cambio de plataforma",
+    "– Carga inmediata",
+    "– Superficie premium",
+];
+
+const fichaLink = "/productos/sistema-implantes/p5d-ficha";
+const cotizarLink = "/productos/sistema-implantes/p5d-cotizacion";
+---
+
+<Layout title="Implante P1D - Sistema de Implantes">
+    <ImplanteSeccion
+        title={title}
+        subtitle={subtitle}
+        imageSrc={p1d.src}
+        bannerImage={bannerLogo.src}
+        description={description}
+        features={features}
+        fichaLink={fichaLink}
+        cotizarLink={cotizarLink}
+    />
+</Layout>

@@ -1,0 +1,51 @@
+---
+import m6961 from "../../../../assets/Productos/microlaminas/6961.png";
+import m6962 from "../../../../assets/Productos/microlaminas/6962.png";
+import m6966 from "../../../../assets/Productos/microlaminas/6966.png";
+import n6900 from "../../../../assets/Productos/microlaminas/n6900.png";
+import usm6300 from "../../../../assets/Productos/microlaminas/usm6300.png";
+import usm6310 from "../../../../assets/Productos/microlaminas/usm6310.png";
+import usm6345 from "../../../../assets/Productos/microlaminas/usm6345.png";
+import usm6400 from "../../../../assets/Productos/microlaminas/usm6400.png";
+import usm6700 from "../../../../assets/Productos/microlaminas/usm6700.png";
+import usm6900 from "../../../../assets/Productos/microlaminas/usm6900.png";
+import usm6910 from "../../../../assets/Productos/microlaminas/usm6910.png";
+import Layout from "../../../../layouts/Layout.astro";
+
+// Array de productos
+const productos = [
+  { id: 1, nombre: "6961", descripcion: "Hoja afilada de radio completo y lados, bisel doble, recta (no maleable)", imagen: m6961.src, enlace: "/productos/sistema-implantes/implante-p5d-matrix" },
+  { id: 2, nombre: "6962", descripcion: "Hoja afilada de radio completo y lados, bisel doble, ángulo de 25° (no maleable)", imagen: m6962.src, enlace: "/productos/sistema-implantes/implante-p5g-matrix" },
+  { id: 3, nombre: "6966", descripcion: "Hoja afilada de radio completo y lados, bisel doble, ángulo de 55° (no maleable)", imagen: m6966.src, enlace: "/productos/sistema-implantes/implante-p7d-matrix" },
+  { id: 4, nombre: "N6900", descripcion: "Hoja Nordland: más estrecha, radio y lados completos y afilados, bisel doble", imagen: n6900.src, enlace: "/productos/sistema-implantes/implante-p1d" },
+  { id: 5, nombre: "USM6300", descripcion: "Hoja de lanza, recta, 7 mm", imagen: usm6300.src, enlace: "/productos/sistema-implantes/implante-p7s" },
+  { id: 6, nombre: "USM6310 (también conocido como CK-1 o CK1)", descripcion: "Hoja de lanza, en ángulo de 10°", imagen: usm6310.src, enlace: "/productos/sistema-implantes/implante-p7n" },
+  { id: 7, nombre: "USM6345", descripcion: "Hoja de lanza, en ángulo de 45°", imagen: usm6345.src, enlace: "/productos/sistema-implantes/implante-p7n" },
+  { id: 8, nombre: "USM6400", descripcion: "Hoja de filo afilado, recta", imagen: usm6400.src, enlace: "/productos/sistema-implantes/implante-p7n" },
+  { id: 9, nombre: "USM6700", descripcion: "Punta de radio de hoja en miniatura, estrecha", imagen: usm6700.src, enlace: "/productos/sistema-implantes/implante-p7n" },
+  { id: 10, nombre: "USM6900", descripcion: "Hoja afilada de radio completo y lados, bisel doble", imagen: usm6900.src, enlace: "/productos/sistema-implantes/implante-p7n" },
+  { id: 11, nombre: "USM6910 (también conocido como CK-2 o CK2)", descripcion: "Hoja afilada de radio completo y lados, en ángulo de 10°", imagen: usm6910.src, enlace: "/productos/sistema-implantes/implante-p7n" }
+];
+---
+
+<Layout title="Micro Láminas">
+  <section class="h-full flex flex-col items-center lg:gap-8 gap-6 w-full border-t border-[#282828] lg:py-16 py-8">
+    <h2 class="lg:text-7xl text-3xl text-[#fff] w-[80%] text-center">Micro Cuchillas en Miniatura</h2>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:py-10 lg:w-[80%] w-[90%]">
+        <!-- Bucle Astro para productos -->
+        {productos.map((producto) => (
+          <div class="flex flex-col text-[#ff9a02] w-full">
+            <a href={producto.enlace} class="w-full transition-transform duration-300 ease-in-out transform hover:scale-105">
+              <img src={producto.imagen} alt={producto.nombre} />
+            </a>
+            <div class="flex justify-center flex-col py-4 w-full">
+              <h4 class="lg:text-lg font-bold w-[80%] text-center">{producto.nombre}</h4>
+              <span class="text-[#adadad] text-base">{producto.descripcion}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+  </section>
+</Layout>

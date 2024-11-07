@@ -1,0 +1,36 @@
+---
+import manijasPinzas from "../../../assets/Productos/microlaminas/ctg_manijas_pinzas.png";
+import cuchillaMiniatura from "../../../assets/Productos/microlaminas/ctg_cuchillas_miniatura.png";
+import microCuchillaMiniatura from "../../../assets/Productos/microlaminas/ctg_micro_cuchillas_miniatura.png";
+import espejos from "../../../assets/Productos/microlaminas/ctg_espejos.png";
+import Layout from "../../../layouts/Layout.astro";
+
+// Array de productos
+const productos = [
+  { id: 1, nombre: "Manijas y Pinzas", imagen: manijasPinzas.src, enlace: "/productos/micro-laminas/manijas-pinzas" },
+  { id: 2, nombre: "Cuchillas en Miniatura", imagen: cuchillaMiniatura.src, enlace: "/productos/micro-laminas/cuchillas-miniatura" },
+  { id: 3, nombre: "Micro Cuchillas en Miniatura", imagen: microCuchillaMiniatura.src, enlace: "/productos/micro-laminas/micro-cuchillas-miniatura" },
+  { id: 4, nombre: "Espejos", imagen: espejos.src, enlace: "/productos/micro-laminas/espejos" }
+];
+---
+
+<Layout title="Micro Láminas">
+  <section class="h-full flex flex-col items-center lg:gap-8 gap-6 w-full border-t border-[#282828] lg:py-16 py-8">
+    <h2 class="lg:text-7xl text-3xl text-[#fff] w-[80%] text-center">Micro Láminas</h2>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:py-10 lg:w-[80%] w-[90%]">
+        <!-- Bucle Astro para productos -->
+        {productos.map((producto) => (
+          <div class="flex flex-col text-[#ff9a02] w-full">
+            <a href={producto.enlace} class="w-full transition-transform duration-300 ease-in-out transform hover:scale-105">
+              <img src={producto.imagen} alt={producto.nombre} />
+            </a>
+            <div class="flex justify-center flex-col py-4 w-full">
+              <h4 class="lg:text-lg font-bold w-[80%] text-center">{producto.nombre}</h4>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+  </section>
+</Layout>

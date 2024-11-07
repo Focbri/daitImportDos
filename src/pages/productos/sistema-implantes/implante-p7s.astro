@@ -1,0 +1,34 @@
+---
+// Page1.astro
+import Layout from "../../../layouts/Layout.astro";
+import ImplanteSeccion from "../../productos/sistema-implantes/ImplanteSeccion.astro"
+import p7s from "../../../assets/Productos/implantes/p7s_p9s_1.png";
+import bannerLogo from "../../../assets/Productos/implantes/implante_logos_banner_2.png";
+
+const title = "P7S, P9S";
+const subtitle = "Implantes de una pieza";
+const description = "P7S es un implante de una sola pieza, con 3 opciones de restauración: a presión, cementado y atornillado, con una rosca ligeramente agresiva, beneficioso para todo tipo de huesos con un diseño híbrido destinado a convertirlo en un implante polivalente, que ofrece una alta estabilidad del cebador y compatibilidad con hueso duro.";
+const features = [
+    "– Alivio de estrés – Estabilidad cortical superior",
+    "– Paso medio",
+    "– Colector óseo",
+    "– Conexión cónica",
+    "– Microanillos",
+];
+
+const fichaLink = "/productos/sistema-implantes/p5d-ficha";
+const cotizarLink = "/productos/sistema-implantes/p5d-cotizacion";
+---
+
+<Layout title="Implante P7S - Sistema de Implantes">
+    <ImplanteSeccion
+        title={title}
+        subtitle={subtitle}
+        imageSrc={p7s.src}
+        bannerImage={bannerLogo.src}
+        description={description}
+        features={features}
+        fichaLink={fichaLink}
+        cotizarLink={cotizarLink}
+    />
+</Layout>

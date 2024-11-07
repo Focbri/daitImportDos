@@ -1,0 +1,82 @@
+---
+import daitLogo from "../assets/Logos/DI_logo.png";
+
+const navLinks = [
+  { href: "/", label: "Inicio" },
+  { href: "/#ctg-productos", label: "Productos" },
+  { href: "/#clientes", label: "Clientes" },
+  { href: "/nosotros", label: "Nosotros" },
+  { href: "/contacto", label: "Contacto" }
+];
+---
+
+<nav class="bg-[#fff] py-2 px-8 2xl:px-16 mx-auto 2xl:mx-0 flex w-full justify-between items-center">
+  <!-- Logo -->
+  <div class="lg:h-20 h-14 2xl:h-36">
+    <a href="/">
+      <img src={daitLogo.src} alt="Grupo Nec Logo" class="h-full" />
+    </a>
+  </div>
+
+  <!-- Botón del menú hamburguesa -->
+  <button id="menu-btn" class="text-[#001037] block lg:hidden focus:outline-none">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-8 h-8">
+      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h22M5 16h22M5 24h22" />
+    </svg>
+  </button>
+
+  <!-- Menú en pantallas grandes -->
+  <div class="hidden lg:flex space-x-10 2xl:space-x-14 h-8 2xl:h-16">
+    {navLinks.map(link => (
+      <a href={link.href} class="text-[#001037] hover:border-b-2 border-[#00c1af] text-xl 2xl:text-5xl">
+        {link.label}
+      </a>
+    ))}
+  </div>
+
+  <!-- Menú desplegable para pantallas móviles -->
+  <div id="mobile-menu" class="fixed inset-0 bg-[#001037] opacity-0 max-h-0 lg:hidden transition-all duration-500 ease-in-out z-50 overflow-hidden">
+    <button id="close-btn" class="absolute top-4 right-4 text-[#00c1af] focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 h-8">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <div class="flex flex-col items-center justify-center h-full space-y-4">
+      {navLinks.map(link => (
+        <a href={link.href} class="text-[#fff] hover:text-[#00c1af] text-3xl md:text-lg">
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</nav>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuBtn = document.getElementById('menu-btn');
+    const closeBtn = document.getElementById('close-btn');
+
+    const toggleMenu = () => {
+      mobileMenu.classList.toggle('max-h-0');
+      mobileMenu.classList.toggle('opacity-0');
+      document.body.style.overflow = mobileMenu.classList.contains('max-h-0') ? 'auto' : 'hidden';
+    };
+
+    menuBtn.onclick = toggleMenu;
+    closeBtn.onclick = toggleMenu;
+
+    window.onscroll = () => {
+      if (!mobileMenu.classList.contains('max-h-0')) {
+        mobileMenu.classList.add('max-h-0', 'opacity-0');
+        document.body.style.overflow = 'auto';
+      }
+    };
+  });
+</script>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
