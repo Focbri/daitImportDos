@@ -25,18 +25,18 @@ import pltUnaPieza from "../../../assets/Productos/implantes/pltfOnePiece.png";
 import Layout from "../../../layouts/Layout.astro";
 
 const productos = [
-  { id: 1, nombre: "Implante P5D Matrix", descripcion: "Plataforma Cónica", imagen: p5dMatrix.src, enlace: "/productos/sistema-implantes/implante-p5d-matrix" },
-  { id: 2, nombre: "Implante de Matriz P5G", descripcion: "Plataforma Cónica", imagen: p5gMatrix.src, enlace: "/productos/sistema-implantes/implante-p5g-matrix" },
-  { id: 3, nombre: "Implante P7D", descripcion: "Plataforma Cónica", imagen: p7d.src, enlace: "/productos/sistema-implantes/implante-p7d-matrix" },
-  { id: 4, nombre: "Implante P1D", descripcion: "Plataforma Cónica", imagen: p1d.src, enlace: "/productos/sistema-implantes/implante-p1d" },
-  { id: 5, nombre: "Implantes P7S, P9S", descripcion: "Plataforma de una Pieza", imagen: p7s_p9s.src, enlace: "/productos/sistema-implantes/implante-p7s" },
-  { id: 6, nombre: "Implante P7N", descripcion: "Plataforma Cónica Estrecha", imagen: p7n.src, enlace: "/productos/sistema-implantes/implante-p7n" }
+  { id: 1, nombre: "Implante P5D Matrix", descripcion: "Plataforma Cónica", imagen: p5dMatrix.src, enlace: "/productos/sistema-implantes/implantes/implante-p5d-matrix" },
+  { id: 2, nombre: "Implante de Matriz P5G", descripcion: "Plataforma Cónica", imagen: p5gMatrix.src, enlace: "/productos/sistema-implantes/implantes/implante-p5g-matrix" },
+  { id: 3, nombre: "Implante P7D", descripcion: "Plataforma Cónica", imagen: p7d.src, enlace: "/productos/sistema-implantes/implantes/implante-p7d-matrix" },
+  { id: 4, nombre: "Implante P1D", descripcion: "Plataforma Cónica", imagen: p1d.src, enlace: "/productos/sistema-implantes/implantes/implante-p1d" },
+  { id: 5, nombre: "Implantes P7S, P9S", descripcion: "Plataforma de una Pieza", imagen: p7s_p9s.src, enlace: "/productos/sistema-implantes/implantes/implante-p7s" },
+  { id: 6, nombre: "Implante P7N", descripcion: "Plataforma Cónica Estrecha", imagen: p7n.src, enlace: "/productos/sistema-implantes/implantes/implante-p7n" }
 ];
 ---
 
 <Layout title="Sistema de Implantes">
   <div class="min-h-screen flex flex-col justify-center items-center w-full overflow-x-hidden">
-    <section class="flex flex-col items-center gap-6 w-full border-t border-[#282828] lg:py-16 py-8">
+    <section class="flex flex-col items-center gap-6 w-full border-t bg-[#001037] border-[#282828] lg:py-16 py-8">
       <h2 class="lg:text-7xl text-3xl text-[#fff] w-[80%] text-center">Sistema de Implantes</h2>
       <div class="text-[#6f6d6f] lg:w-[80%] w-[90%] lg:text-center text-left lg:text-base text-sm">
         <p>Los productos comercializados por DAIT Import son implantes dentales y productos protésicos relacionados que cuentan con una sólida experiencia en el mercado y que ofrecemos a un precio competitivo. Hoy en día, miles de profesionales de todo el mundo utilizan nuestros productos a diario. Todos nuestros implantes están fabricados con un material biocompatible: la aleación de titanio 5 de grado médico con una superficie extraordinaria.</p>
@@ -58,7 +58,7 @@ const productos = [
       </div>
     </section>
 
-    <section class="flex flex-col items-center justify-center lg:gap-8 gap-6 w-full border-t border-[#282828] lg:py-16 py-8">
+    <section class="flex flex-col items-center justify-center lg:gap-8 gap-6 bg-[#001037] w-full border-t border-[#282828] lg:py-16 py-8">
       <div class="w-full flex justify-center flex-col items-center gap-6">
         <h2 class="lg:text-7xl text-3xl text-[#fff] w-[80%] text-center">Accesorios protésicos</h2>
         <div class="text-[#8d8b8b] lg:w-[80%] w-[90%] lg:text-center text-left lg:text-base text-sm">
@@ -90,7 +90,7 @@ const productos = [
       
           <!-- Segunda fila: imagen en la segunda columna -->
           <div class="relative row-start-2 col-start-2 group">
-            <a href="URL2" class="block">
+            <a href="/productos/sistema-implantes/accesorios-p/analogicos" class="block">
               <img src={analogicos.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
               <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
                 Analógicos
@@ -100,7 +100,7 @@ const productos = [
       
           <!-- Tercera fila: imagen en la primera columna -->
           <div class="relative row-start-3 col-start-1 group">
-            <a href="URL3" class="block">
+            <a href="/productos/sistema-implantes/accesorios-p/carga-inmediata" class="block">
               <img src={cargaI.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
               <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
                 Carga Inmmediata
@@ -110,7 +110,7 @@ const productos = [
       
           <!-- Cuarta fila: imagen en la segunda columna -->
           <div class="relative row-start-4 col-start-2 group">
-            <a href="URL4" class="block">
+            <a href="/productos/sistema-implantes/accesorios-p/restSobredentadura" class="block">
               <img src={restauracionSobreDent.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
               <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
                 Restauración de Sobredentadura
@@ -120,7 +120,7 @@ const productos = [
       
           <!-- Quinta fila: imagen en la tercera columna -->
           <div class="relative row-start-5 col-start-3 group">
-            <a href="URL5" class="block">
+            <a href="/productos/sistema-implantes/accesorios-p/transferencias" class="block">
               <img src={transferencias.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
               <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
                 Transferencias
@@ -134,7 +134,7 @@ const productos = [
           <!-- Primera fila: dos espacios vacíos y una imagen en la tercera posición -->
           <div class="col-span-2"></div>
           <div class="relative row-start-1 col-start-1 group">
-            <a href="URL6" class="block">
+            <a href="/productos/sistema-implantes/accesorios-p/tapas-curativas" class="block">
               <img src={tapasCurativas.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
               <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
                 Tapas Curativas
@@ -144,7 +144,7 @@ const productos = [
       
           <!-- Segunda fila: imagen en la segunda columna -->
           <div class="relative row-start-2 col-start-2 group">
-            <a href="URL7" class="block">
+            <a href="/productos/sistema-implantes/accesorios-p/restauracion-cementada" class="block">
               <img src={restauracionCementada.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
               <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
                 Restauración Cementada

@@ -1,0 +1,31 @@
+---
+import Layout from "../../../../../../layouts/Layout.astro";
+import { accPelotas } from "../../restSobredentadura/restSobredentaduraData.astro";
+---
+
+<Layout title="Analógicos - Accesorios Protésicos - Dait Import">
+    <section class="w-full flex flex-col items-center py-8 px-4 text-white bg-[#001037]">
+        <div class="w-full text-2xl border-b text-center py-4">
+            <h2>ACCESORIOS PARA PELOTAS</h2>
+        </div>
+        <div class="flex flex-wrap w-[90%] gap-12 py-8">
+            {accPelotas.map((product) => (
+                <div class="flex w-full md:w-[45%] gap-6 flex-col md:flex-row items-center">
+                    <div>
+                        <img src={product.image} alt={product.title} class="rounded w-full h-auto" />
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <h2 class="text-xl font-semibold">{product.title}</h2>
+                        <span>{product.description}</span>
+                        <div class="flex flex-col gap-1">
+                            <div><span class="font-semibold">Tipo de Conexión: </span>{product.connectionType}</div>
+                            <div><span class="font-semibold">Material: </span>{product.material}</div>
+                            <div><span class="font-semibold">Tallas/Longitudes: </span>{product.sizes}</div>
+                            <div><span class="font-semibold">Instrucciones: </span>{product.instructions}</div>
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </section>
+</Layout>

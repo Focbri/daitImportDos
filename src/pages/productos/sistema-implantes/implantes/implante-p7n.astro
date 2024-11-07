@@ -1,13 +1,13 @@
 ---
 // Page1.astro
-import Layout from "../../../layouts/Layout.astro";
-import ImplanteSeccion from "../../productos/sistema-implantes/ImplanteSeccion.astro"
-import p5dM from "../../../assets/Productos/implantes/P5D_matrix_1.png";
-import bannerLogo from "../../../assets/Productos/implantes/implante_logos_banner.png";
+import Layout from "../../../../layouts/Layout.astro";
+import ImplanteSeccion from "../../../productos/sistema-implantes/ImplanteSeccion.astro"
+import p7n from "../../../../assets/Productos/implantes/P7N_rotating.gif";
+import bannerLogo from "../../../../assets/Productos/implantes/implante_logos_banner_3.png";
 
-const title = "P5D";
-const subtitle = "Implante Matrix";
-const description = "La saciedad inicial de P5D con su preservación ósea superior crea resultados exitosos.";
+const title = "P7N";
+const subtitle = "Implante estrecho";
+const description = "La saciedad inicial de P7N con su preservación ósea superior crea resultados exitosos..";
 const features = [
     "– Alivio de estrés – Estabilidad cortical superior",
     "– Paso medio",
@@ -24,11 +24,11 @@ const fichaLink = "/productos/sistema-implantes/p5d-ficha";
 const cotizarLink = "/productos/sistema-implantes/p5d-cotizacion";
 ---
 
-<Layout title="Implante P5D - Sistema de Implantes">
+<Layout title="Implante P7N - Sistema de Implantes">
     <ImplanteSeccion
         title={title}
         subtitle={subtitle}
-        imageSrc={p5dM.src}
+        imageSrc={p7n.src}
         bannerImage={bannerLogo.src}
         description={description}
         features={features}
