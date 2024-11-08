@@ -1,15 +1,15 @@
 ---
 import Layout from "../../../../../../layouts/Layout.astro";
-import { tapaHWD } from "../../tapas-curativas/tapasCurativasData.astro";
+import { pilarRectoS1ND } from "../restauracionCData.astro";
 ---
 
 <Layout title="Analógicos - Accesorios Protésicos - Dait Import">
     <section class="w-full flex flex-col items-center py-8 px-4 text-white bg-[#001037]">
-        <div class="w-full text-2xl border-b text-center py-4">
-            <h2>TRANSFERENCIAS BANDEJA ABIERTA</h2>
+        <div class="w-full text-3xl border-b text-center py-2">
+            <h2>S2AD - PILARES ANGULARES ANATÓMICOS</h2>
         </div>
         <div class="flex flex-wrap lg:w-[90%] w-full justify-center gap-12 py-8">
-            {tapaHWD.map((product) => (
+            {pilarRectoS1ND.map((product) => (
                 <div class="flex w-full md:w-[45%] flex-row md:flex-row items-center border gap-1 rounded">
                     <div class="w-[50%]">
                         <img src={product.image} alt={product.title} class="rounded w-full h-auto" />

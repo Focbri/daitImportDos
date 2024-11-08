@@ -15,18 +15,18 @@ const productos = [
 ---
 
 <Layout title="Micro Láminas">
-  <section class="h-full flex flex-col items-center lg:gap-8 gap-6 w-full border-t border-[#282828] lg:py-16 py-8">
-    <h2 class="lg:text-7xl text-3xl text-[#fff] w-[80%] text-center">Micro Láminas</h2>
+  <section class="h-full flex flex-col items-center lg:gap-8 gap-6 w-full bg-[#001037] border-t border-[#282828] lg:py-16 py-8">
+    <h2 class="lg:text-5xl text-3xl border-b text-[#fff] w-[80%] text-center">Micro Láminas</h2>
 
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:py-10 lg:w-[80%] w-[90%]">
         <!-- Bucle Astro para productos -->
         {productos.map((producto) => (
-          <div class="flex flex-col text-[#ff9a02] w-full">
+          <div class="flex flex-col text-[#00c1af] w-full">
             <a href={producto.enlace} class="w-full transition-transform duration-300 ease-in-out transform hover:scale-105">
-              <img src={producto.imagen} alt={producto.nombre} />
+              <img src={producto.imagen} alt={producto.nombre} class="rounded-lg" />
             </a>
             <div class="flex justify-center flex-col py-4 w-full">
-              <h4 class="lg:text-lg font-bold w-[80%] text-center">{producto.nombre}</h4>
+              <h4 class="lg:text-xl text-lg font-bold w-full text-center">{producto.nombre}</h4>
             </div>
           </div>
         ))}

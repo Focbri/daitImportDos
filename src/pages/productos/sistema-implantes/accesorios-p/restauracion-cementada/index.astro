@@ -1,35 +1,57 @@
 ---
 import Layout from "../../../../../layouts/Layout.astro";
-import { pilarS1TD } from "../restauracion-cementada/restauracionCData.astro";
+import { restCementada } from "../restauracion-cementada/restauracionCData.astro";
 import a1dANALOG from "../../../../../assets/Productos/implantes/a1dAnalog.png";
 ---
 
 <Layout title="Restauración Sobredentadura - Accesorios Protésicos - Dait Import">
     <section class="w-full flex flex-col items-center py-8 px-4 text-white bg-[#001037]">
-        <div class="w-full text-2xl border-b text-center py-4">
+        <div class="w-full text-3xl border-b text-center py-2">
             <h2>Restauración Cementada</h2>
         </div>
-        <div class="flex flex-wrap w-[90%] justify-center gap-12 py-8">
-            <a href="/productos/sistema-implantes/accesorios-p/restSobredentadura/accesoriosPelotas" class="w-[30%]">
+        <div class="flex flex-wrap lg:w-[90%] w-full justify-center lg:gap-12 gap-4 py-8">
+            <!-- Primera imagen sin efecto de hover -->
+            <a href="/productos/sistema-implantes/accesorios-p/restauracion-cementada/pilares-angulares" class="lg:w-[30%] w-[45%]">
                 <img src={a1dANALOG.src} alt="" class="rounded w-full h-auto" />
             </a>
-            <a href="/productos/sistema-implantes/accesorios-p/restSobredentadura/pilaresSmartLock" class="w-[30%]">
-                <img src={a1dANALOG.src} alt="" class="rounded w-full h-auto" />
-            </a>
-            <a href="/productos/sistema-implantes/accesorios-p/restSobredentadura/pilaresEasyFix" class="w-[30%]">
-                <img src={a1dANALOG.src} alt="" class="rounded w-full h-auto" />
-            </a>
+            
+            <!-- Segunda imagen con efecto de hover -->
+            <div class="relative lg:w-[30%] w-[45%] group">
+                <img src={a1dANALOG.src} alt="" class="rounded w-full h-auto transition-opacity duration-300 group-hover:opacity-50" />
+                <div class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white p-4">
+                    <h3 class="lg:text-2xl text-base mb-2">Pilares Angulares Atómicos</h3>
+                    <ul class="space-y-2 lg:text-sm text-xs">
+                        <li><a href="/productos/sistema-implantes/accesorios-p/restauracion-cementada/S2AD-Pilares-Angulares-Anatomicos-15" class="hover:underline">-S2AD - PILARES ANGULARES A. DE 15°</a></li>
+                        <li><a href="/productos/sistema-implantes/accesorios-p/restauracion-cementada/S2AD-Pilares-Angulares-Anatomicos-25" class="hover:underline">-S2AD - PILARES ANGULARES A. DE 25°</a></li>
+                </div>
+            </div>
+            
+            <!-- Tercera imagen con efecto de hover -->
+            <div class="relative lg:w-[30%] w-[45%] group">
+                <img src={a1dANALOG.src} alt="" class="rounded w-full h-auto transition-opacity duration-300 group-hover:opacity-50" />
+                <div class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white p-4">
+                    <h3 class="text-lg font-semibold mb-2">Pilares Rectos</h3>
+                    <ul class="space-y-2 lg:text-sm text-xs">
+                        <li><a href="/productos/sistema-implantes/accesorios-p/restauracion-cementada/Pilar-Recto-S1D" class="hover:underline">-Pilar Recto S1D</a></li>
+                        <li><a href="/productos/sistema-implantes/accesorios-p/restauracion-cementada/Pilar-Recto-S1AD" class="hover:underline">-Pilar Recto S1AD</a></li>
+                        <li><a href="/productos/sistema-implantes/accesorios-p/restauracion-cementada/Pilar-Recto-S1ND" class="hover:underline">-Pilar Recto S1ND</a></li>
+                        <li><a href="/productos/sistema-implantes/accesorios-p/restauracion-cementada/Pilar-Recto-S1WD" class="hover:underline">-Pilar Recto S1WD</a></li>
+                        <li><a href="/productos/sistema-implantes/accesorios-p/restauracion-cementada/Pilar-Recto-S1W8D" class="hover:underline">-Pilar Recto S1W8D</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="flex flex-wrap w-[90%] border-t gap-12 py-8">
-            {pilarS1TD.map((product) => (
-                <div class="flex w-full md:w-[45%] gap-6 flex-col md:flex-row items-center">
-                    <div>
+
+        <div class="flex flex-wrap lg:w-[90%] w-full justify-center gap-12 py-8">
+            {restCementada.map((product) => (
+                <div class="flex w-full md:w-[45%] flex-row md:flex-row items-center border gap-1 rounded">
+                    <div class="w-[50%]">
                         <img src={product.image} alt={product.title} class="rounded w-full h-auto" />
                     </div>
-                    <div class="flex flex-col gap-2">
-                        <h2 class="text-xl font-semibold">{product.title}</h2>
-                        <span>{product.description}</span>
-                        <div class="flex flex-col gap-1">
+                    <div class="flex flex-col w-[50%]">
+                        <h2 class="text-lg font-semibold">{product.title}</h2>
+                        <span class="text-sm">{product.description}</span>
+                        <div class="flex flex-col text-sm gap-1">
                             <div><span class="font-semibold">Tipo de Conexión: </span>{product.connectionType}</div>
                             <div><span class="font-semibold">Material: </span>{product.material}</div>
                             <div><span class="font-semibold">Tallas/Longitudes: </span>{product.sizes}</div>

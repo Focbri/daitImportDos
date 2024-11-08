@@ -36,16 +36,16 @@ const productos = [
 
 <Layout title="Sistema de Implantes">
   <div class="min-h-screen flex flex-col justify-center items-center w-full overflow-x-hidden">
-    <section class="flex flex-col items-center gap-6 w-full border-t bg-[#001037] border-[#282828] lg:py-16 py-8">
-      <h2 class="lg:text-7xl text-3xl text-[#fff] w-[80%] text-center">Sistema de Implantes</h2>
+    <section class="flex flex-col items-center gap-6 w-full border-t bg-[#001037] lg:py-16 py-8">
+      <h2 class="lg:text-5xl text-3xl text-[#fff] w-[80%] text-center">Sistema de Implantes</h2>
       <div class="text-[#6f6d6f] lg:w-[80%] w-[90%] lg:text-center text-left lg:text-base text-sm">
         <p>Los productos comercializados por DAIT Import son implantes dentales y productos protésicos relacionados que cuentan con una sólida experiencia en el mercado y que ofrecemos a un precio competitivo. Hoy en día, miles de profesionales de todo el mundo utilizan nuestros productos a diario. Todos nuestros implantes están fabricados con un material biocompatible: la aleación de titanio 5 de grado médico con una superficie extraordinaria.</p>
         <span class="font-bold">Todos nuestros productos cumplen con los más estrictos estándares de calidad internacionales.</span>
       </div>
 
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:py-10 lg:w-[80%] w-[90%]">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:py-10 lg:w-[80%] w-[90%]">
         {productos.map((producto) => (
-          <div class="flex flex-col justify-center items-center text-[#ff9a02] w-full">
+          <div class="flex flex-col justify-center items-center text-[#00c1af] w-full">
             <a href={producto.enlace} class="w-full transition-transform duration-300 ease-in-out transform hover:scale-105">
               <img src={producto.imagen} alt={producto.nombre} class="w-full max-w-full h-auto object-cover" />
             </a>
@@ -58,9 +58,9 @@ const productos = [
       </div>
     </section>
 
-    <section class="flex flex-col items-center justify-center lg:gap-8 gap-6 bg-[#001037] w-full border-t border-[#282828] lg:py-16 py-8">
+    <section class="flex flex-col items-center justify-center lg:gap-8 gap-6 bg-[#001037] w-full border-t border-[#00c1af] lg:py-16 py-8">
       <div class="w-full flex justify-center flex-col items-center gap-6">
-        <h2 class="lg:text-7xl text-3xl text-[#fff] w-[80%] text-center">Accesorios protésicos</h2>
+        <h2 class="lg:text-5xl text-3xl text-[#fff] w-[80%] text-center ">Accesorios protésicos</h2>
         <div class="text-[#8d8b8b] lg:w-[80%] w-[90%] lg:text-center text-left lg:text-base text-sm">
           <p><span class="font-bold">Dait Import</span> ofrece una amplia gama de accesorios protésicos de alta calidad que complementan nuestros sistemas de implantes. Nuestros accesorios están diseñados para satisfacer las necesidades específicas de cualquier caso clínico, desde restauraciones de dientes unitarios hasta reconstrucciones de arcadas completas. Con nuestras soluciones protésicas, los profesionales dentales pueden lograr resultados funcionales y estéticos óptimos para sus pacientes.</p>
         </div>
@@ -80,9 +80,9 @@ const productos = [
           <!-- Primera fila: dos espacios vacíos y una imagen en la tercera posición -->
           <div class="col-span-2"></div>
           <div class="relative row-start-1 col-start-3 group">
-            <a href="URL1" class="block">
+            <a href="/" class="block">
               <img src={cadCam.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
-              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center lg:text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xs lg:text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
                 CAD-CAM
               </span>
             </a>
@@ -92,7 +92,7 @@ const productos = [
           <div class="relative row-start-2 col-start-2 group">
             <a href="/productos/sistema-implantes/accesorios-p/analogicos" class="block">
               <img src={analogicos.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
-              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xs lg:text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
                 Analógicos
               </span>
             </a>
@@ -102,7 +102,7 @@ const productos = [
           <div class="relative row-start-3 col-start-1 group">
             <a href="/productos/sistema-implantes/accesorios-p/carga-inmediata" class="block">
               <img src={cargaI.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
-              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xs lg:text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
                 Carga Inmmediata
               </span>
             </a>
@@ -112,7 +112,7 @@ const productos = [
           <div class="relative row-start-4 col-start-2 group">
             <a href="/productos/sistema-implantes/accesorios-p/restSobredentadura" class="block">
               <img src={restauracionSobreDent.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
-              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xs lg:text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
                 Restauración de Sobredentadura
               </span>
             </a>
@@ -122,7 +122,7 @@ const productos = [
           <div class="relative row-start-5 col-start-3 group">
             <a href="/productos/sistema-implantes/accesorios-p/transferencias" class="block">
               <img src={transferencias.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
-              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xs lg:text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
                 Transferencias
               </span>
             </a>
@@ -136,7 +136,7 @@ const productos = [
           <div class="relative row-start-1 col-start-1 group">
             <a href="/productos/sistema-implantes/accesorios-p/tapas-curativas" class="block">
               <img src={tapasCurativas.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
-              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xs lg:text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
                 Tapas Curativas
               </span>
             </a>
@@ -146,7 +146,7 @@ const productos = [
           <div class="relative row-start-2 col-start-2 group">
             <a href="/productos/sistema-implantes/accesorios-p/restauracion-cementada" class="block">
               <img src={restauracionCementada.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
-              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xs lg:text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
                 Restauración Cementada
               </span>
             </a>
@@ -154,9 +154,9 @@ const productos = [
       
           <!-- Tercera fila: imagen en la primera columna -->
           <div class="relative row-start-3 col-start-3 group">
-            <a href="URL8" class="block">
+            <a href="/productos/sistema-implantes/accesorios-p/kitComprobacion" class="block">
               <img src={kitC.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
-              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xs lg:text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
                 Kit de Comprobación
               </span>
             </a>
@@ -164,9 +164,9 @@ const productos = [
       
           <!-- Cuarta fila: imagen en la segunda columna -->
           <div class="relative row-start-4 col-start-2 group">
-            <a href="URL9" class="block">
+            <a href="/productos/sistema-implantes/accesorios-p/pilaresFundicion" class="block">
               <img src={pilaresFundicion.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
-              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xs lg:text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
                 Pilares de Fundición
               </span>
             </a>
@@ -174,9 +174,9 @@ const productos = [
       
           <!-- Quinta fila: imagen en la tercera columna -->
           <div class="relative row-start-5 col-start-1 group">
-            <a href="URL10" class="block">
+            <a href="/productos/sistema-implantes/accesorios-p/restauracion-atornillada" class="block">
               <img src={restauracionAtornillada.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-2">
-              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xs lg:text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
                 Restauración Atornillada
               </span>
             </a>

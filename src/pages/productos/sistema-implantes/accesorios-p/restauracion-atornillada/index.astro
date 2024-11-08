@@ -1,15 +1,21 @@
 ---
-import Layout from "../../../../../../layouts/Layout.astro";
-import { tapaHWD } from "../../tapas-curativas/tapasCurativasData.astro";
+import Layout from "../../../../../layouts/Layout.astro";
+import { restAtornillada } from "../restauracion-atornillada/restauracionAtornilladaData.astro";
+import a1dANALOG from "../../../../../assets/Productos/implantes/a1dAnalog.png";
 ---
 
-<Layout title="Analógicos - Accesorios Protésicos - Dait Import">
+<Layout title="Restauración Sobredentadura - Accesorios Protésicos - Dait Import">
     <section class="w-full flex flex-col items-center py-8 px-4 text-white bg-[#001037]">
-        <div class="w-full text-2xl border-b text-center py-4">
-            <h2>TRANSFERENCIAS BANDEJA ABIERTA</h2>
+        <div class="w-full text-3xl border-b text-center py-2">
+            <h2>Restauración Atornillada</h2>
         </div>
         <div class="flex flex-wrap lg:w-[90%] w-full justify-center gap-12 py-8">
-            {tapaHWD.map((product) => (
+            <a href="/productos/sistema-implantes/accesorios-p/restauracion-atornillada/Pilar-MultiUnidades" class="lg:w-[30%] w-[50%]">
+                <img src={a1dANALOG.src} alt="" class="rounded w-full h-auto" />
+            </a>
+        </div>
+        <div class="flex flex-wrap lg:w-[90%] w-full justify-center gap-12 py-8">
+            {restAtornillada.map((product) => (
                 <div class="flex w-full md:w-[45%] flex-row md:flex-row items-center border gap-1 rounded">
                     <div class="w-[50%]">
                         <img src={product.image} alt={product.title} class="rounded w-full h-auto" />
