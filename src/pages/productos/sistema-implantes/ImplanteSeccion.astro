@@ -4,15 +4,15 @@ import sbtc from "../../../assets/Logos/sbtc_Logo.png";
 import hidro from "../../../assets/Logos/hidrofilicidad_Logo.png";
 import sterile from "../../../assets/Logos/sterile_Logo.png";
 
-const { title, subtitle, imageSrc, bannerImage, description, features = [], fichaLink, cotizarLink } = Astro.props;
+const { title, subtitle, imageSrc, bannerImage, description, features = [], cotizarLink } = Astro.props;
 ---
 
-<section class="w-full bg-[#001037] flex flex-col justify-center items-center lg:pt-16 pt-4 border-b">
+<section class="w-full bg-[#001037] flex flex-col justify-center items-center lg:py-16 py-4 border-b">
     <div class="flex lg:flex-row flex-col justify-center items-center lg:gap-4 lg:w-[80%] w-[90%]">
         <div class="lg:w-[60%] w-[90%] p-2">
             <img src={imageSrc} alt={title}>
         </div>
-        <div class="p-2 lg:w-[40%] w-full flex flex-col lg:gap-8 gap-6">
+        <div class="p-2 lg:w-[40%] w-full flex flex-col lg:gap-6">
             <div class="text-[#fff] lg:text-6xl text-4xl">
                 <h3 class="font-bold">{title}</h3>
                 <h3>{subtitle}</h3>
@@ -32,9 +32,8 @@ const { title, subtitle, imageSrc, bannerImage, description, features = [], fich
                     )}
                 </ul>
             </div>
-            <div class="w-full flex justify-center p-4 gap-6 text-[#fff]">
-                <a href={fichaLink} class="border border-[#00c1af] rounded py-2 px-4 lg:px-8 hover:bg-[#ff9a02]">Ficha Técnica</a>
-                <a href={cotizarLink} class="border border-[#00c1af] rounded py-2 px-4 lg:px-8 hover:bg-[#ff6a02]">Cotizar Producto</a>
+            <div class="w-full flex p-4 text-[#fff]">
+                <a href={cotizarLink} target="_blank" class="border border-[#00c1af] rounded py-2 px-4 lg:px-8 hover:bg-[#00c1af]">Cotizar Producto</a>
             </div>
         </div>
     </div>

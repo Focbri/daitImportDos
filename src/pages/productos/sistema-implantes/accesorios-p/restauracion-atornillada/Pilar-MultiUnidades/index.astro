@@ -10,19 +10,35 @@ import { pilaresMultiU } from "../restauracionAtornilladaData.astro";
         </div>
         <div class="flex flex-wrap lg:w-[90%] w-full justify-center gap-12 py-8">
             {pilaresMultiU.map((product) => (
-                <div class="flex w-full md:w-[45%] flex-row md:flex-row items-center border gap-1 rounded">
-                    <div class="w-[50%]">
-                        <img src={product.image} alt={product.title} class="rounded w-full h-auto" />
-                    </div>
-                    <div class="flex flex-col w-[50%]">
-                        <h2 class="text-lg font-semibold">{product.title}</h2>
-                        <span class="text-sm">{product.description}</span>
-                        <div class="flex flex-col text-sm gap-1">
-                            <div><span class="font-semibold">Tipo de Conexión: </span>{product.connectionType}</div>
-                            <div><span class="font-semibold">Material: </span>{product.material}</div>
-                            <div><span class="font-semibold">Tallas/Longitudes: </span>{product.sizes}</div>
-                            <div><span class="font-semibold">Instrucciones: </span>{product.instructions}</div>
+                <div class="flex w-full md:w-[45%] flex-col border gap-4 rounded">
+                    <div class="flex w-full flex-row md:flex-row">
+                        <div class="w-[50%]">
+                            <img src={product.image} alt={product.title} class="rounded w-full h-auto" />
                         </div>
+                        <div class="flex flex-col w-[50%] p-4">
+                            <h2 class="text-lg font-semibold leading-none">{product.title}</h2>
+                            <span class="lg:text-sm text-xs">{product.description}</span>
+                            <div class="flex flex-col lg:text-sm text-xs gap-1">
+                                <div><span class="font-semibold">Tipo de Conexión: </span>{product.connectionType}</div>
+                                <div><span class="font-semibold">Material: </span>{product.material}</div>
+                                <div><span class="font-semibold">Tallas/Longitudes: </span>{product.sizes}</div>
+                                <div><span class="font-semibold">Instrucciones: </span>{product.instructions}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full p-4">
+                        <span class="font-semibold">Accesorios: </span>
+                        <!-- Verificación condicional de imágenes adicionales -->
+                            {product.additionalImages && (
+                                <div class="grid grid-cols-2 gap-1">
+                                    {product.additionalImages.map((img) => (
+                                        <div class="grid grid-cols-2 items-center gap-2">
+                                            <img src={img.src} alt={`${product.title} ${img.label}`} class="w-full rounded" />
+                                            <span class="text-xs">{img.label}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
                     </div>
                 </div>
             ))}

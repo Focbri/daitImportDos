@@ -7,10 +7,10 @@ import Layout from "../../../../layouts/Layout.astro";
 
 // Array de productos
 const productos = [
-  { id: 1, nombre: "MR1", descripcion: "Redondo, 5 mm, en ángulo de 30°", imagen: mr1.src, enlace: "/productos/sistema-implantes/implante-p5d-matrix" },
-  { id: 2, nombre: "MR2", descripcion: "Redondo, 3 mm, en ángulo de 30°", imagen: mr2.src, enlace: "/productos/sistema-implantes/implante-p5g-matrix" },
-  { id: 3, nombre: "MR3", descripcion: "Lados rectos, medianos, en ángulo de 30°", imagen: mr3.src, enlace: "/productos/sistema-implantes/implante-p7d-matrix" },
-  { id: 4, nombre: "MR6", descripcion: "Lados rectos, grandes, en ángulo de 30°", imagen: mr6.src, enlace: "/productos/sistema-implantes/implante-p1d" }
+  { id: 1, nombre: "MR1", descripcion: "Redondo, 5 mm, en ángulo de 30°", imagen: mr1.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Espejos%20MR1" },
+  { id: 2, nombre: "MR2", descripcion: "Redondo, 3 mm, en ángulo de 30°", imagen: mr2.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Espejos%20MR2" },
+  { id: 3, nombre: "MR3", descripcion: "Lados rectos, medianos, en ángulo de 30°", imagen: mr3.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Espejos%20MR3" },
+  { id: 4, nombre: "MR6", descripcion: "Lados rectos, grandes, en ángulo de 30°", imagen: mr6.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Espejos%20MR6" }
 ];
 ---
 
@@ -22,7 +22,7 @@ const productos = [
         <!-- Bucle Astro para productos -->
         {productos.map((producto) => (
           <div class="flex flex-col text-[#00c1af] w-full">
-            <a href={producto.enlace} class="w-full transition-transform duration-300 ease-in-out transform hover:scale-105">
+            <a href={producto.enlace} target="_blank" class="w-full transition-transform duration-300 ease-in-out transform hover:scale-105">
               <img src={producto.imagen} alt={producto.nombre} class="rounded-lg"/>
             </a>
             <div class="flex justify-center flex-col py-4 w-full">

@@ -11,14 +11,14 @@ import Layout from "../../../../layouts/Layout.astro";
 
 // Array de productos
 const productos = [
-  { id: 1, nombre: "6910", descripcion: "Cuchilla en miniatura con punta redonda y paladar hendido en ángulo", imagen: cuchilla_6910.src, enlace: "/productos/sistema-implantes/implante-p5d-matrix" },
-  { id: 2, nombre: "S-6300", descripcion: "Hoja de lanza, recta", imagen: s63.src, enlace: "/productos/sistema-implantes/implante-p5g-matrix" },
-  { id: 3, nombre: "S-6400", descripcion: "Hoja con borde afilado y punta redondeada", imagen: s64.src, enlace: "/productos/sistema-implantes/implante-p7d-matrix" },
-  { id: 4, nombre: "S-6500", descripcion: "Punta de corte de cuchilla de 15°", imagen: s65.src, enlace: "/productos/sistema-implantes/implante-p1d" },
-  { id: 5, nombre: "S-6700", descripcion: "Punta de radio de hoja en miniatura", imagen: s67.src, enlace: "/productos/sistema-implantes/implante-p7s" },
-  { id: 6, nombre: "S-6900", descripcion: "Hoja afilada de radio completo y lados, bisel doble", imagen: s69.src, enlace: "/productos/sistema-implantes/implante-p7n" },
-  { id: 7, nombre: "S6915", descripcion: "Hoja afilada de radio completo y lados, bisel doble, ángulo de 10°", imagen: s6915.src, enlace: "/productos/sistema-implantes/implante-p7n" },
-  { id: 8, nombre: "S6945", descripcion: "Hoja afilada de radio completo y lados, bisel doble, ángulo de 45°", imagen: s6945.src, enlace: "/productos/sistema-implantes/implante-p7n" }
+  { id: 1, nombre: "6910", descripcion: "Cuchilla en miniatura con punta redonda y paladar hendido en ángulo", imagen: cuchilla_6910.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Cuchillas%20en%20Miniatura%20%206910" },
+  { id: 2, nombre: "S-6300", descripcion: "Hoja de lanza, recta", imagen: s63.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Cuchillas%20en%20Miniatura%20%20S-6300" },
+  { id: 3, nombre: "S-6400", descripcion: "Hoja con borde afilado y punta redondeada", imagen: s64.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Cuchillas%20en%20Miniatura%20%20S-6400" },
+  { id: 4, nombre: "S-6500", descripcion: "Punta de corte de cuchilla de 15°", imagen: s65.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Cuchillas%20en%20Miniatura%20%20S-6500" },
+  { id: 5, nombre: "S-6700", descripcion: "Punta de radio de hoja en miniatura", imagen: s67.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Cuchillas%20en%20Miniatura%20%20S-6700" },
+  { id: 6, nombre: "S-6900", descripcion: "Hoja afilada de radio completo y lados, bisel doble", imagen: s69.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Cuchillas%20en%20Miniatura%20%20S-6900" },
+  { id: 7, nombre: "S6915", descripcion: "Hoja afilada de radio completo y lados, bisel doble, ángulo de 10°", imagen: s6915.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Cuchillas%20en%20Miniatura%20%20S6915" },
+  { id: 8, nombre: "S6945", descripcion: "Hoja afilada de radio completo y lados, bisel doble, ángulo de 45°", imagen: s6945.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Cuchillas%20en%20Miniatura%20%20S6945" }
 ];
 ---
 
@@ -30,7 +30,7 @@ const productos = [
         <!-- Bucle Astro para productos -->
         {productos.map((producto) => (
           <div class="flex flex-col text-[#00c1af] w-full">
-            <a href={producto.enlace} class="w-full transition-transform duration-300 ease-in-out transform hover:scale-105">
+            <a href={producto.enlace} target="_blank" class="w-full transition-transform duration-300 ease-in-out transform hover:scale-105">
               <img src={producto.imagen} alt={producto.nombre} class="rounded-lg"/>
             </a>
             <div class="flex justify-center flex-col py-4 w-full">

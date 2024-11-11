@@ -12,15 +12,15 @@ import Layout from "../../../layouts/Layout.astro";
 
 // Array de productos
 const productos = [
-  { id: 1, nombre: "Concentrador de Oxígeno", imagen: concentradorO.src, enlace: "/productos/micro-laminas/manijas-pinzas" },
-  { id: 2, nombre: "Cubre Calzados", imagen: cubreC.src, enlace: "/productos/micro-laminas/cuchillas-miniatura" },
-  { id: 3, nombre: "Desfibrilador", imagen: desfibrilador.src, enlace: "/productos/micro-laminas/micro-cuchillas-miniatura" },
-  { id: 4, nombre: "Electrocardiógrafo", imagen: electrocardiografo.src, enlace: "/productos/micro-laminas/espejos" },
-  { id: 5, nombre: "Gorro de Enfermera", imagen: gorroE.src, enlace: "/productos/micro-laminas/espejos" },
-  { id: 6, nombre: "Guantes de Latex", imagen: guantesL.src, enlace: "/productos/micro-laminas/espejos" },
-  { id: 7, nombre: "Guantes Quirúrgicos", imagen: guantesQ.src, enlace: "/productos/micro-laminas/espejos" },
-  { id: 8, nombre: "Mandil Quirúrgico", imagen: mandilQ.src, enlace: "/productos/micro-laminas/espejos" },
-  { id: 9, nombre: "Mandil SMS", imagen: mandilSMS.src, enlace: "/productos/micro-laminas/espejos" }
+  { id: 1, nombre: "Concentrador de Oxígeno", imagen: concentradorO.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Concentrador%20de%20Oxígeno" },
+  { id: 2, nombre: "Cubre Calzados", imagen: cubreC.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Cubre%20Calzados" },
+  { id: 3, nombre: "Desfibrilador", imagen: desfibrilador.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Desfibrilador" },
+  { id: 4, nombre: "Electrocardiógrafo", imagen: electrocardiografo.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Electrocardiógrafo" },
+  { id: 5, nombre: "Gorro de Enfermera", imagen: gorroE.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Gorro%20de%20Enfermera" },
+  { id: 6, nombre: "Guantes de Latex", imagen: guantesL.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Guantes%20de%20Latex" },
+  { id: 7, nombre: "Guantes Quirúrgicos", imagen: guantesQ.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Guantes%20Quirúrgicos" },
+  { id: 8, nombre: "Mandil Quirúrgico", imagen: mandilQ.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Mandil%20Quirúrgico" },
+  { id: 9, nombre: "Mandil SMS", imagen: mandilSMS.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Mandil%20SMS" }
 ];
 ---
 
@@ -32,7 +32,7 @@ const productos = [
         <!-- Bucle Astro para productos -->
         {productos.map((producto) => (
           <div class="flex flex-col text-[#00c1af] w-full">
-            <a href={producto.enlace} class="w-full transition-transform duration-300 ease-in-out transform hover:scale-105">
+            <a href={producto.enlace} target="_blank" class="w-full transition-transform duration-300 ease-in-out transform hover:scale-105">
               <img src={producto.imagen} alt={producto.nombre} class="rounded-lg"/>
             </a>
             <div class="flex justify-center flex-col py-4 w-full">

@@ -14,17 +14,17 @@ import Layout from "../../../../layouts/Layout.astro";
 
 // Array de productos
 const productos = [
-  { id: 1, nombre: "6961", descripcion: "Hoja afilada de radio completo y lados, bisel doble, recta (no maleable)", imagen: m6961.src, enlace: "/productos/sistema-implantes/implante-p5d-matrix" },
-  { id: 2, nombre: "6962", descripcion: "Hoja afilada de radio completo y lados, bisel doble, ángulo de 25° (no maleable)", imagen: m6962.src, enlace: "/productos/sistema-implantes/implante-p5g-matrix" },
-  { id: 3, nombre: "6966", descripcion: "Hoja afilada de radio completo y lados, bisel doble, ángulo de 55° (no maleable)", imagen: m6966.src, enlace: "/productos/sistema-implantes/implante-p7d-matrix" },
-  { id: 4, nombre: "N6900", descripcion: "Hoja Nordland: más estrecha, radio y lados completos y afilados, bisel doble", imagen: n6900.src, enlace: "/productos/sistema-implantes/implante-p1d" },
-  { id: 5, nombre: "USM6300", descripcion: "Hoja de lanza, recta, 7 mm", imagen: usm6300.src, enlace: "/productos/sistema-implantes/implante-p7s" },
-  { id: 6, nombre: "USM6310 (también conocido como CK-1 o CK1)", descripcion: "Hoja de lanza, en ángulo de 10°", imagen: usm6310.src, enlace: "/productos/sistema-implantes/implante-p7n" },
-  { id: 7, nombre: "USM6345", descripcion: "Hoja de lanza, en ángulo de 45°", imagen: usm6345.src, enlace: "/productos/sistema-implantes/implante-p7n" },
-  { id: 8, nombre: "USM6400", descripcion: "Hoja de filo afilado, recta", imagen: usm6400.src, enlace: "/productos/sistema-implantes/implante-p7n" },
-  { id: 9, nombre: "USM6700", descripcion: "Punta de radio de hoja en miniatura, estrecha", imagen: usm6700.src, enlace: "/productos/sistema-implantes/implante-p7n" },
-  { id: 10, nombre: "USM6900", descripcion: "Hoja afilada de radio completo y lados, bisel doble", imagen: usm6900.src, enlace: "/productos/sistema-implantes/implante-p7n" },
-  { id: 11, nombre: "USM6910 (también conocido como CK-2 o CK2)", descripcion: "Hoja afilada de radio completo y lados, en ángulo de 10°", imagen: usm6910.src, enlace: "/productos/sistema-implantes/implante-p7n" }
+  { id: 1, nombre: "6961", descripcion: "Hoja afilada de radio completo y lados, bisel doble, recta (no maleable)", imagen: m6961.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Micro%20Cuchillas%20en%20Miniatura%20%206961" },
+  { id: 2, nombre: "6962", descripcion: "Hoja afilada de radio completo y lados, bisel doble, ángulo de 25° (no maleable)", imagen: m6962.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Micro%20Cuchillas%20en%20Miniatura%20%206962" },
+  { id: 3, nombre: "6966", descripcion: "Hoja afilada de radio completo y lados, bisel doble, ángulo de 55° (no maleable)", imagen: m6966.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Micro%20Cuchillas%20en%20Miniatura%20%206966" },
+  { id: 4, nombre: "N6900", descripcion: "Hoja Nordland: más estrecha, radio y lados completos y afilados, bisel doble", imagen: n6900.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Micro%20Cuchillas%20en%20Miniatura%20%20N6900" },
+  { id: 5, nombre: "USM6300", descripcion: "Hoja de lanza, recta, 7 mm", imagen: usm6300.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Micro%20Cuchillas%20en%20Miniatura%20%20USM6300" },
+  { id: 6, nombre: "USM6310 (también conocido como CK-1 o CK1)", descripcion: "Hoja de lanza, en ángulo de 10°", imagen: usm6310.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Micro%20Cuchillas%20en%20Miniatura%20%20USM6310" },
+  { id: 7, nombre: "USM6345", descripcion: "Hoja de lanza, en ángulo de 45°", imagen: usm6345.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Micro%20Cuchillas%20en%20Miniatura%20%20USM6345" },
+  { id: 8, nombre: "USM6400", descripcion: "Hoja de filo afilado, recta", imagen: usm6400.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Micro%20Cuchillas%20en%20Miniatura%20%20USM6400" },
+  { id: 9, nombre: "USM6700", descripcion: "Punta de radio de hoja en miniatura, estrecha", imagen: usm6700.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Micro%20Cuchillas%20en%20Miniatura%20%20USM6700" },
+  { id: 10, nombre: "USM6900", descripcion: "Hoja afilada de radio completo y lados, bisel doble", imagen: usm6900.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Micro%20Cuchillas%20en%20Miniatura%20%20USM6900" },
+  { id: 11, nombre: "USM6910 (también conocido como CK-2 o CK2)", descripcion: "Hoja afilada de radio completo y lados, en ángulo de 10°", imagen: usm6910.src, enlace: "https://wa.me/51920341943?text=Hola,%20me%20puede%20brindar%20más%20información%20sobre%20Micro%20Cuchillas%20en%20Miniatura%20%20USM6910" }
 ];
 ---
 
@@ -36,7 +36,7 @@ const productos = [
         <!-- Bucle Astro para productos -->
         {productos.map((producto) => (
           <div class="flex flex-col text-[#00c1af] w-full">
-            <a href={producto.enlace} class="w-full transition-transform duration-300 ease-in-out transform hover:scale-105">
+            <a href={producto.enlace} target="_blank" class="w-full transition-transform duration-300 ease-in-out transform hover:scale-105">
               <img src={producto.imagen} alt={producto.nombre} class="rounded-lg"/>
             </a>
             <div class="flex justify-center flex-col py-4 w-full">

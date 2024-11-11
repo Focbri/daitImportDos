@@ -15,9 +15,9 @@ import { pilaresSmartL } from "../../restSobredentadura/restSobredentaduraData.a
                         <img src={product.image} alt={product.title} class="rounded w-full h-auto" />
                     </div>
                     <div class="flex flex-col w-[50%]">
-                        <h2 class="text-lg font-semibold">{product.title}</h2>
-                        <span class="text-sm">{product.description}</span>
-                        <div class="flex flex-col text-sm gap-1">
+                        <h2 class="text-lg font-semibold leading-none">{product.title}</h2>
+                        <span class="lg:text-sm text-xs">{product.description}</span>
+                        <div class="flex flex-col lg:text-sm text-xs gap-1">
                             <div><span class="font-semibold">Tipo de Conexión: </span>{product.connectionType}</div>
                             <div><span class="font-semibold">Material: </span>{product.material}</div>
                             <div><span class="font-semibold">Tallas/Longitudes: </span>{product.sizes}</div>

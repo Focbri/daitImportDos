@@ -38,7 +38,7 @@ const productos = [
   <div class="min-h-screen flex flex-col justify-center items-center w-full overflow-x-hidden">
     <section class="flex flex-col items-center gap-6 w-full border-t bg-[#001037] lg:py-16 py-8">
       <h2 class="lg:text-5xl text-3xl text-[#fff] w-[80%] text-center">Sistema de Implantes</h2>
-      <div class="text-[#6f6d6f] lg:w-[80%] w-[90%] lg:text-center text-left lg:text-base text-sm">
+      <div class="text-[#adadad] lg:w-[80%] w-[90%] lg:text-center text-left lg:text-base text-sm">
         <p>Los productos comercializados por DAIT Import son implantes dentales y productos protésicos relacionados que cuentan con una sólida experiencia en el mercado y que ofrecemos a un precio competitivo. Hoy en día, miles de profesionales de todo el mundo utilizan nuestros productos a diario. Todos nuestros implantes están fabricados con un material biocompatible: la aleación de titanio 5 de grado médico con una superficie extraordinaria.</p>
         <span class="font-bold">Todos nuestros productos cumplen con los más estrictos estándares de calidad internacionales.</span>
       </div>
@@ -74,25 +74,25 @@ const productos = [
         </div>
       </div>
 
-      <div class="w-[90%] lg:w-[70%] flex flex-row items-center justify-center gap-4">
+      <div class="w-[95%] lg:w-[70%] flex flex-row items-center justify-center gap-4">
         <!-- Primer contenedor con imágenes en disposición específica -->
         <div class="grid grid-cols-3 grid-rows-5 w-[50%] gap-1">
-          <!-- Primera fila: dos espacios vacíos y una imagen en la tercera posición -->
-          <div class="col-span-2"></div>
+          <!-- Imagen con texto al costado en móvil y hover en desktop -->
+          
           <div class="relative row-start-1 col-start-3 group">
-            <a href="/" class="block">
-              <img src={cadCam.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
-              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xs lg:text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
-                CAD-CAM
+            <a href="/" class="flex flex-row-reverse items-center sm:flex-col lg:block">
+              <img src={cadCam.src} alt="Cad-Cam" class="w-full h-auto lg:transition-transform lg:duration-300 lg:group-hover:translate-y-[-16px]">
+              <span class="sm:inline lg:absolute lg:bottom-0 lg:left-0 lg:w-full lg:bg-black lg:bg-opacity-70 text-white text-center text-xs lg:text-xl lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 lg:transition-opacity lg:duration-300">
+                Cad-Cam
               </span>
             </a>
           </div>
       
           <!-- Segunda fila: imagen en la segunda columna -->
           <div class="relative row-start-2 col-start-2 group">
-            <a href="/productos/sistema-implantes/accesorios-p/analogicos" class="block">
-              <img src={analogicos.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
-              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xs lg:text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+            <a href="/productos/sistema-implantes/accesorios-p/analogicos" class="flex items-center sm:flex-col lg:block">
+              <img src={analogicos.src} alt="Cad-Cam" class="w-full h-auto lg:transition-transform lg:duration-300 lg:group-hover:translate-y-[-16px]">
+              <span class="sm:inline lg:absolute lg:bottom-0 lg:left-0 lg:w-full lg:bg-black lg:bg-opacity-70 text-white text-center text-xs lg:text-xl lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 lg:transition-opacity lg:duration-300">
                 Analógicos
               </span>
             </a>
@@ -100,9 +100,9 @@ const productos = [
       
           <!-- Tercera fila: imagen en la primera columna -->
           <div class="relative row-start-3 col-start-1 group">
-            <a href="/productos/sistema-implantes/accesorios-p/carga-inmediata" class="block">
-              <img src={cargaI.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
-              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xs lg:text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+            <a href="/productos/sistema-implantes/accesorios-p/carga-inmediata" class="flex items-center sm:flex-col lg:block">
+              <img src={cargaI.src} alt="Cad-Cam" class="w-full h-auto lg:transition-transform lg:duration-300 lg:group-hover:translate-y-[-16px]">
+              <span class="sm:inline lg:absolute lg:bottom-0 lg:left-0 lg:w-full lg:bg-black lg:bg-opacity-70 text-white text-center text-xs lg:text-xl lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 lg:transition-opacity lg:duration-300">
                 Carga Inmmediata
               </span>
             </a>
@@ -110,19 +110,19 @@ const productos = [
       
           <!-- Cuarta fila: imagen en la segunda columna -->
           <div class="relative row-start-4 col-start-2 group">
-            <a href="/productos/sistema-implantes/accesorios-p/restSobredentadura" class="block">
-              <img src={restauracionSobreDent.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
-              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xs lg:text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
-                Restauración de Sobredentadura
+            <a href="/productos/sistema-implantes/accesorios-p/restSobredentadura" class="flex items-center sm:flex-col lg:block">
+              <img src={restauracionSobreDent.src} alt="Cad-Cam" class="w-full h-auto lg:transition-transform lg:duration-300 lg:group-hover:translate-y-[-16px]">
+              <span class="sm:inline lg:absolute lg:bottom-0 lg:left-0 lg:w-full lg:bg-black lg:bg-opacity-70 text-white text-center text-xs lg:text-xl lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 lg:transition-opacity lg:duration-300">
+                Restauración Sobredentadura
               </span>
             </a>
           </div>
       
           <!-- Quinta fila: imagen en la tercera columna -->
           <div class="relative row-start-5 col-start-3 group">
-            <a href="/productos/sistema-implantes/accesorios-p/transferencias" class="block">
-              <img src={transferencias.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
-              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xs lg:text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+            <a href="/productos/sistema-implantes/accesorios-p/transferencias" class="flex flex-row-reverse items-center sm:flex-col lg:block">
+              <img src={transferencias.src} alt="Cad-Cam" class="w-full h-auto lg:transition-transform lg:duration-300 lg:group-hover:translate-y-[-16px]">
+              <span class="sm:inline lg:absolute lg:bottom-0 lg:left-0 lg:w-full lg:bg-black lg:bg-opacity-70 text-white text-center text-xs lg:text-xl lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 lg:transition-opacity lg:duration-300">
                 Transferencias
               </span>
             </a>
@@ -134,9 +134,9 @@ const productos = [
           <!-- Primera fila: dos espacios vacíos y una imagen en la tercera posición -->
           <div class="col-span-2"></div>
           <div class="relative row-start-1 col-start-1 group">
-            <a href="/productos/sistema-implantes/accesorios-p/tapas-curativas" class="block">
-              <img src={tapasCurativas.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
-              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xs lg:text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+            <a href="/productos/sistema-implantes/accesorios-p/tapas-curativas" class="flex items-center sm:flex-col lg:block">
+              <img src={tapasCurativas.src} alt="Cad-Cam" class="w-full h-auto lg:transition-transform lg:duration-300 lg:group-hover:translate-y-[-16px]">
+              <span class="sm:inline lg:absolute lg:bottom-0 lg:left-0 lg:w-full lg:bg-black lg:bg-opacity-70 text-white text-center text-xs lg:text-xl lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 lg:transition-opacity lg:duration-300">
                 Tapas Curativas
               </span>
             </a>
@@ -144,9 +144,9 @@ const productos = [
       
           <!-- Segunda fila: imagen en la segunda columna -->
           <div class="relative row-start-2 col-start-2 group">
-            <a href="/productos/sistema-implantes/accesorios-p/restauracion-cementada" class="block">
-              <img src={restauracionCementada.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
-              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xs lg:text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+            <a href="/productos/sistema-implantes/accesorios-p/restauracion-cementada" class="flex items-center sm:flex-col lg:block">
+              <img src={restauracionCementada.src} alt="Cad-Cam" class="w-full h-auto lg:transition-transform lg:duration-300 lg:group-hover:translate-y-[-16px]">
+              <span class="sm:inline lg:absolute lg:bottom-0 lg:left-0 lg:w-full lg:bg-black lg:bg-opacity-70 text-white text-center text-xs lg:text-xl lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 lg:transition-opacity lg:duration-300">
                 Restauración Cementada
               </span>
             </a>
@@ -154,29 +154,29 @@ const productos = [
       
           <!-- Tercera fila: imagen en la primera columna -->
           <div class="relative row-start-3 col-start-3 group">
-            <a href="/productos/sistema-implantes/accesorios-p/kitComprobacion" class="block">
-              <img src={kitC.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
-              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xs lg:text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
-                Kit de Comprobación
+            <a href="/productos/sistema-implantes/accesorios-p/kitComprobacion" class="flex flex-row-reverse items-center sm:flex-col lg:block">
+              <img src={kitC.src} alt="Cad-Cam" class="w-full h-auto lg:transition-transform lg:duration-300 lg:group-hover:translate-y-[-16px]">
+              <span class="sm:inline lg:absolute lg:bottom-0 lg:left-0 lg:w-full lg:bg-black lg:bg-opacity-70 text-white text-center text-xs lg:text-xl lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 lg:transition-opacity lg:duration-300">
+                Kit Comprobación
               </span>
             </a>
           </div>
       
           <!-- Cuarta fila: imagen en la segunda columna -->
           <div class="relative row-start-4 col-start-2 group">
-            <a href="/productos/sistema-implantes/accesorios-p/pilaresFundicion" class="block">
-              <img src={pilaresFundicion.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-[-16px]">
-              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xs lg:text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
-                Pilares de Fundición
+            <a href="/productos/sistema-implantes/accesorios-p/pilaresFundicion" class="flex items-center sm:flex-col lg:block">
+              <img src={pilaresFundicion.src} alt="Cad-Cam" class="w-full h-auto lg:transition-transform lg:duration-300 lg:group-hover:translate-y-[-16px]">
+              <span class="sm:inline lg:absolute lg:bottom-0 lg:left-0 lg:w-full lg:bg-black lg:bg-opacity-70 text-white text-center text-xs lg:text-xl lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 lg:transition-opacity lg:duration-300">
+                Pilares Fundición
               </span>
             </a>
           </div>
       
           <!-- Quinta fila: imagen en la tercera columna -->
           <div class="relative row-start-5 col-start-1 group">
-            <a href="/productos/sistema-implantes/accesorios-p/restauracion-atornillada" class="block">
-              <img src={restauracionAtornillada.src} alt="Cad-Cam" class="w-full h-auto transition-transform duration-300 group-hover:translate-y-2">
-              <span class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center text-xs lg:text-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-opacity duration-300">
+            <a href="/productos/sistema-implantes/accesorios-p/restauracion-atornillada" class="flex items-center sm:flex-col lg:block">
+              <img src={restauracionAtornillada.src} alt="Cad-Cam" class="w-full h-auto lg:transition-transform lg:duration-300 lg:group-hover:translate-y-[-16px]">
+              <span class="sm:inline lg:absolute lg:bottom-0 lg:left-0 lg:w-full lg:bg-black lg:bg-opacity-70 text-white text-center text-xs lg:text-xl lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 lg:transition-opacity lg:duration-300">
                 Restauración Atornillada
               </span>
             </a>
@@ -185,7 +185,7 @@ const productos = [
       </div>
 
       <div class="w-full flex justify-center lg:mt-12 my-12">
-        <div class="lg:w-[80%] w-full flex text-[#fff] lg:justify-evenly justify-center uppercase font-semibold gap-4 text-center lg:text-base text-xs">
+        <div class="lg:w-[80%] w-full flex text-[#adadad] lg:justify-evenly justify-center uppercase font-semibold gap-4 text-center lg:text-base text-xs">
           <div class="flex flex-col items-center gap-8 w-[20%]">
             <img src={pltConica.src} alt="">
             <span>Plataforma Cónica</span>
