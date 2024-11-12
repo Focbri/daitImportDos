@@ -1,7 +1,9 @@
 ---
 import Layout from "../../../../../layouts/Layout.astro";
 import { pilarS1TD } from "../restSobredentadura/restSobredentaduraData.astro";
-import a1dANALOG from "../../../../../assets/Productos/implantes/a1dAnalog.png";
+import aPelotas from "../../../../../assets/Productos/implantes/accesoriosP/accPelotas.png";
+import pilaresSL from "../../../../../assets/Productos/implantes/accesoriosP/pilaresSL.png";
+import pilaresEF from "../../../../../assets/Productos/implantes/accesoriosP/pilaresEF.png";
 ---
 
 <Layout title="Restauración Sobredentadura - Accesorios Protésicos - Dait Import">
@@ -10,14 +12,17 @@ import a1dANALOG from "../../../../../assets/Productos/implantes/a1dAnalog.png";
             <h2>Restauración Sobredentadura</h2>
         </div>
         <div class="flex flex-wrap lg:w-[90%] w-full justify-center gap-12 py-8">
-            <a href="/productos/sistema-implantes/accesorios-p/restSobredentadura/accesoriosPelotas" class="lg:w-[30%] w-[40%]">
-                <img src={a1dANALOG.src} alt="" class="rounded w-full h-auto" />
+            <a href="/productos/sistema-implantes/accesorios-p/restSobredentadura/accesoriosPelotas" class="lg:w-[20%] w-[40%] transition-transform duration-300 ease-in-out transform hover:scale-105 text-[#001037] relative">
+                <img src={aPelotas.src} alt="" class="rounded w-full" />
+                <span class="absolute lg:bottom-3 bottom-0 left-0 w-full text-[#000] text-center lg:text-xl text-lg leading-tight px-2">Accesorios para Pelotas</span>
             </a>
-            <a href="/productos/sistema-implantes/accesorios-p/restSobredentadura/pilaresSmartLock" class="lg:w-[30%] w-[40%]">
-                <img src={a1dANALOG.src} alt="" class="rounded w-full h-auto" />
+            <a href="/productos/sistema-implantes/accesorios-p/restSobredentadura/pilaresSmartLock" class="lg:w-[20%] w-[40%] transition-transform duration-300 ease-in-out transform hover:scale-105 text-[#001037] relative">
+                <img src={pilaresSL.src} alt="" class="rounded w-full" />
+                <span class="absolute lg:bottom-3 bottom-0 left-0 w-full text-[#000] text-center lg:text-xl text-lg px-2 leading-tight">Pilares Smart-Lock</span>
             </a>
-            <a href="/productos/sistema-implantes/accesorios-p/restSobredentadura/pilaresEasyFix" class="lg:w-[30%] w-[40%]">
-                <img src={a1dANALOG.src} alt="" class="rounded w-full h-auto" />
+            <a href="/productos/sistema-implantes/accesorios-p/restSobredentadura/pilaresEasyFix" class="lg:w-[20%] w-[40%] transition-transform duration-300 ease-in-out transform hover:scale-105 text-[#001037] relative">
+                <img src={pilaresEF.src} alt="" class="rounded w-full" />
+                <span class="absolute lg:bottom-3 bottom-0 left-0 w-full text-[#000] text-center lg:text-xl text-lg px-2">Pilares Easy-Fix</span>
             </a>
         </div>
         <div class="flex flex-wrap w-[90%] border-t gap-12 py-8">

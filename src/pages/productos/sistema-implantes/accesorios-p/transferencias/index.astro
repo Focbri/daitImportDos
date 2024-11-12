@@ -1,6 +1,7 @@
 ---
 import Layout from "../../../../../layouts/Layout.astro";
-import a1dANALOG from "../../../../../assets/Productos/implantes/a1dAnalog.png";
+import bandejaA from "../../../../../assets/Productos/implantes/accesoriosP/tbandejaA.png";
+import bandejaC from "../../../../../assets/Productos/implantes/accesoriosP/tbandejaC.png";
 ---
 
 <Layout title="Restauración Sobredentadura - Accesorios Protésicos - Dait Import">
@@ -8,12 +9,14 @@ import a1dANALOG from "../../../../../assets/Productos/implantes/a1dAnalog.png";
         <div class="w-full text-3xl border-b text-center py-2">
             <h2>TRANSFERENCIAS</h2>
         </div>
-        <div class="flex flex-wrap lg:w-[90%] w-full justify-center gap-12 py-8">
-            <a href="/productos/sistema-implantes/accesorios-p/transferencias/transfBandejaAbierta" class="lg:w-[30%] w-[40%]">
-                <img src={a1dANALOG.src} alt="" class="rounded w-full h-auto" />
+        <div class="flex flex-wrap lg:w-[90%] w-full justify-center lg:gap-12 gap-6 py-8">
+            <a href="/productos/sistema-implantes/accesorios-p/transferencias/transfBandejaCerrada" class="lg:w-[20%] w-[45%] transition-transform duration-300 ease-in-out transform hover:scale-105 text-[#001037] relative">
+                <img src={bandejaC.src} alt="" class="rounded w-full" />
+                <span class="absolute lg:bottom-3 bottom-0 left-0 w-full text-[#000] text-center lg:text-xl text-lg px-2 leading-none">Transferencias con Bandeja Cerrada</span>
             </a>
-            <a href="/productos/sistema-implantes/accesorios-p/transferencias/transfBandejaCerrada" class="lg:w-[30%] w-[40%]">
-                <img src={a1dANALOG.src} alt="" class="rounded w-full h-auto" />
+            <a href="/productos/sistema-implantes/accesorios-p/transferencias/transfBandejaAbierta" class="lg:w-[20%] w-[45%] transition-transform duration-300 ease-in-out transform hover:scale-105 text-[#001037] relative">
+                <img src={bandejaA.src} alt="" class="rounded w-full" />
+                <span class="absolute lg:bottom-3 bottom-0 left-0 w-full text-[#000] text-center lg:text-xl text-lg px-2 leading-none">Transferencias de Bandeja Abierta</span>
             </a>
         </div>
     </section>

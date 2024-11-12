@@ -1,7 +1,9 @@
 ---
 import Layout from "../../../../../layouts/Layout.astro";
 import { restCementada } from "../restauracion-cementada/restauracionCData.astro";
-import a1dANALOG from "../../../../../assets/Productos/implantes/a1dAnalog.png";
+import pilaresAngulares from "../../../../../assets/Productos/implantes/accesoriosP/pilaresAngulares.png";
+import pilaresAngularesA from "../../../../../assets/Productos/implantes/accesoriosP/pilaresAngularesA.png";
+import pilaresRectos from "../../../../../assets/Productos/implantes/accesoriosP/pilaresRectos.png";
 ---
 
 <Layout title="Restauración Sobredentadura - Accesorios Protésicos - Dait Import">
@@ -11,24 +13,27 @@ import a1dANALOG from "../../../../../assets/Productos/implantes/a1dAnalog.png";
         </div>
         <div class="flex flex-wrap lg:w-[90%] w-full justify-center lg:gap-12 gap-4 py-8">
             <!-- Primera imagen sin efecto de hover -->
-            <a href="/productos/sistema-implantes/accesorios-p/restauracion-cementada/pilares-angulares" class="lg:w-[30%] w-[45%]">
-                <img src={a1dANALOG.src} alt="" class="rounded w-full h-auto" />
+            <a href="/productos/sistema-implantes/accesorios-p/restauracion-cementada/pilares-angulares" class="lg:w-[20%] w-[45%] transition-transform duration-300 ease-in-out transform hover:scale-105 text-[#001037] relative">
+                <img src={pilaresAngulares.src} alt="" class="rounded w-full h-auto" />
+                <span class="absolute lg:bottom-3 bottom-0 left-0 w-full text-[#000] text-center lg:text-xl text-lg px-2 leading-none">Pilares Angulares</span>
             </a>
             
             <!-- Segunda imagen con efecto de hover -->
-            <div class="relative lg:w-[30%] w-[45%] group">
-                <img src={a1dANALOG.src} alt="" class="rounded w-full h-auto transition-opacity duration-300 group-hover:opacity-50" />
+            <div class="lg:w-[20%] w-[45%] transition-transform duration-300 ease-in-out transform hover:scale-105 text-[#001037] relative group">
+                <img src={pilaresAngularesA.src} alt="" class="rounded w-full h-auto transition-opacity duration-300 group-hover:opacity-50" />
+                <span class="absolute lg:bottom-3 bottom-0 left-0 w-full text-[#000] text-center lg:text-xl text-lg px-2 leading-none">Pilares Angulares Anatómicos</span>
                 <div class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white p-4">
-                    <h3 class="lg:text-2xl text-base mb-2">Pilares Angulares Atómicos</h3>
+                    <h3 class="lg:text-lg text-base mb-2 leading-none font-semibold">Pilares Angulares Atómicos</h3>
                     <ul class="space-y-2 lg:text-sm text-xs">
-                        <li><a href="/productos/sistema-implantes/accesorios-p/restauracion-cementada/S2AD-Pilares-Angulares-Anatomicos-15" class="hover:underline">-S2AD - PILARES ANGULARES A. DE 15°</a></li>
-                        <li><a href="/productos/sistema-implantes/accesorios-p/restauracion-cementada/S2AD-Pilares-Angulares-Anatomicos-25" class="hover:underline">-S2AD - PILARES ANGULARES A. DE 25°</a></li>
+                        <li><a href="/productos/sistema-implantes/accesorios-p/restauracion-cementada/S2AD-Pilares-Angulares-Anatomicos-15" class="hover:underline">-S2AD - Pilares Angulares A. de 15°</a></li>
+                        <li><a href="/productos/sistema-implantes/accesorios-p/restauracion-cementada/S2AD-Pilares-Angulares-Anatomicos-25" class="hover:underline">-S2AD - Pilares Angulares A. de 25°</a></li>
                 </div>
             </div>
             
             <!-- Tercera imagen con efecto de hover -->
-            <div class="relative lg:w-[30%] w-[45%] group">
-                <img src={a1dANALOG.src} alt="" class="rounded w-full h-auto transition-opacity duration-300 group-hover:opacity-50" />
+            <div class="lg:w-[20%] w-[45%] transition-transform duration-300 ease-in-out transform hover:scale-105 text-[#001037] relative group">
+                <img src={pilaresRectos.src} alt="" class="rounded w-full h-auto transition-opacity duration-300 group-hover:opacity-50" />
+                <span class="absolute lg:bottom-3 bottom-0 left-0 w-full text-[#000] text-center lg:text-lg text-lg px-2 leading-none">Pilares Rectos</span>
                 <div class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white p-4">
                     <h3 class="text-lg font-semibold mb-2">Pilares Rectos</h3>
                     <ul class="space-y-2 lg:text-sm text-xs">
