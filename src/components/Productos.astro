@@ -14,15 +14,15 @@ const productos = [
 ];
 ---
 
-<section id="ctg-productos" class="w-full flex flex-col gap-8 bg-[#fff] py-14 px-4">
+<section id="ctg-productos" class="w-full flex flex-col gap-8 bg-[#fff] py-14 2xl:py-24 px-4">
   <div class="w-full text-[#000] flex justify-center">
-    <h2 class="lg:text-5xl text-3xl border-b border-[#001037] w-[90%] lg:w-[84%] text-center">Nuestros Productos</h2>
+    <h2 class="lg:text-5xl 2xl:text-7xl text-3xl border-b border-[#001037] w-[90%] lg:w-[84%] text-center">Nuestros Productos</h2>
   </div>
   
   <div class="w-full lg:gap-6 gap-4 flex justify-center flex-wrap text-[#fff] text-lg lg:text-xl">
     {productos.map((producto) => (
       <a href={producto.enlace} class="flex flex-col items-center transition-transform duration-300 ease-in-out transform hover:scale-105 border border-[#001037] lg:w-[20%] w-[45%] rounded-[4px] overflow-hidden">
-        <div class="bg-[#001037] w-full text-center py-2">
+        <div class="bg-[#001037] w-full text-center py-2 2xl:text-4xl">
           <h3>{producto.nombre}</h3>
         </div>
         <div class="w-full bg-[#fff] flex justify-center hover:bg-[#ff6a02]">
