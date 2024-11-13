@@ -27,10 +27,10 @@ import { pilaresMultiU } from "../restauracionAtornilladaData.astro";
                         </div>
                     </div>
                     <div class="w-full p-4">
-                        <span class="font-semibold">Accesorios: </span>
+                        <span class="font-semibold lg:text-lg">Accesorios: </span>
                         <!-- Verificación condicional de imágenes adicionales -->
                             {product.additionalImages && (
-                                <div class="grid grid-cols-2 gap-1">
+                                <div class="grid grid-cols-2 gap-1 mt-2">
                                     {product.additionalImages.map((img) => (
                                         <div class="grid grid-cols-2 items-center gap-2">
                                             <img src={img.src} alt={`${product.title} ${img.label}`} class="w-full rounded" />

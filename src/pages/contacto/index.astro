@@ -1,18 +1,30 @@
 ---
-import Layout from "../../layouts/Layout.astro"
+import Layout from "../../layouts/Layout.astro";
 ---
-<Layout title="Contacto">
-    <div class="w-full flex flex-col text-[#fff] px-4">
-        <div>
-            <h2>Página en construcción</h2>
-        </div>
-        <div class="grid grid-cols-2">
-            <div>
-    
+
+<Layout title="Contacto"  >
+	<main class="w-full my-8 flex justify-evenly">
+        <div class="flex flex-col items-center justify-center gap-4 lg:w-[35%] w-[80%]">
+            <div class="text-center">
+                <h6 class="uppercase text-[#8FC751] leading-3">¡estamos listos para atenderte!</h6>
+                <h2 class="uppercase text-[#1579BD] lg:text-6xl text-2xl font-bold">contacta</h2>
+                <h3 class="uppercase text-[#55BABB] leading-4 lg:text-4xl text-xl">con nosotros</h3>
             </div>
-            <div>
-                
+            <div class="w-[80%]">
+                <form action="/contacto/formulario.php" method="post" class="text-[#000] text-center flex flex-col gap-2">
+                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre y apellido" class="p-2 border-2 rounded-xl text-center" required>
+
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu número de contacto" class="p-2 border-2 rounded-xl text-center" required>
+
+                    <input type="email" id="correo" name="correo" placeholder="Déjanos tu correo electrónico" class="p-2 border-2 rounded-xl text-center" required>
+                    
+                    <textarea id="mensaje" name="mensaje" placeholder="Ingresa tu consulta" class="p-2 border-2 rounded-xl resize-none text-center" rows="5" cols="20" required></textarea>
+                    
+                    <div class="flex justify-center items-center w-full">
+                        <input type="submit" class="bg-[#00bbbc] text-[#fff] font-bold text-lg border-2 rounded-2xl lg:py-4 py-2 mb-4 lg:w-[50%] w-2/5" value="Enviar">
+                    </div>
+                </form>
             </div>
         </div>
-    </div>
+	</main>
 </Layout>
