@@ -2,29 +2,70 @@
 import Layout from "../../layouts/Layout.astro";
 ---
 
-<Layout title="Contacto"  >
-	<main class="w-full my-8 flex justify-evenly">
-        <div class="flex flex-col items-center justify-center gap-4 lg:w-[35%] w-[80%]">
-            <div class="text-center">
-                <h6 class="uppercase text-[#8FC751] leading-3">¡estamos listos para atenderte!</h6>
-                <h2 class="uppercase text-[#1579BD] lg:text-6xl text-2xl font-bold">contacta</h2>
-                <h3 class="uppercase text-[#55BABB] leading-4 lg:text-4xl text-xl">con nosotros</h3>
-            </div>
-            <div class="w-[80%]">
-                <form action="/contacto/formulario.php" method="post" class="text-[#000] text-center flex flex-col gap-2">
-                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre y apellido" class="p-2 border-2 rounded-xl text-center" required>
-
-                    <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu número de contacto" class="p-2 border-2 rounded-xl text-center" required>
-
-                    <input type="email" id="correo" name="correo" placeholder="Déjanos tu correo electrónico" class="p-2 border-2 rounded-xl text-center" required>
-                    
-                    <textarea id="mensaje" name="mensaje" placeholder="Ingresa tu consulta" class="p-2 border-2 rounded-xl resize-none text-center" rows="5" cols="20" required></textarea>
-                    
-                    <div class="flex justify-center items-center w-full">
-                        <input type="submit" class="bg-[#00bbbc] text-[#fff] font-bold text-lg border-2 rounded-2xl lg:py-4 py-2 mb-4 lg:w-[50%] w-2/5" value="Enviar">
-                    </div>
-                </form>
-            </div>
+<Layout title="Contacto">
+  <main class="w-full py-24 flex justify-evenly bg-[#001037]">
+    <div class="flex flex-col items-center justify-center gap-4 lg:w-[35%] w-[80%]">
+      <div class="text-center">
+        <h6 class="uppercase text-[#8FC751] leading-3">¡Estamos listos para atenderte!</h6>
+        <h2 class="uppercase text-[#1579BD] lg:text-6xl text-2xl font-bold">Contacta</h2>
+        <h3 class="uppercase text-[#55BABB] leading-4 lg:text-4xl text-xl">Con Nosotros</h3>
+      </div>
+      <div class="lg:w-[80%] w-full">
+        <!-- Formulario de contacto -->
+        <form id="contactForm" class="text-[#000] text-center flex flex-col gap-2">
+          <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre y apellido" class="p-2 border-2 rounded-xl text-center" required>
+          <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu número de contacto" class="p-2 border-2 rounded-xl text-center" required>
+          <input type="email" id="correo" name="correo" placeholder="Déjanos tu correo electrónico" class="p-2 border-2 rounded-xl text-center" required>
+          <textarea id="mensaje" name="mensaje" placeholder="Ingresa tu consulta" class="p-2 border-2 rounded-xl resize-none text-center" rows="5" cols="20" required></textarea>
+          <div class="flex justify-center items-center w-full">
+            <input type="submit" class="bg-[#00bbbc] text-[#fff] transition-transform duration-300 ease-in-out transform hover:scale-105 hover:cursor-pointer font-bold text-lg border-2 rounded-2xl lg:py-4 py-2 lg:w-[50%] w-2/5" value="Enviar">
+          </div>
+        </form>
+        <!-- Contenedor de notificación -->
+        <div id="notification" class="hidden fixed top-10 left-1/2 transform -translate-x-1/2 p-4 border rounded-md shadow-lg bg-gray-100">
+          <p id="notificationMessage" class="text-center"></p>
         </div>
-	</main>
+      </div>
+    </div>
+  </main>
 </Layout>
+<script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("contactForm");
+      const notification = document.getElementById("notification");
+      const notificationMessage = document.getElementById("notificationMessage");
+  
+      form.addEventListener("submit", async function (event) {
+        event.preventDefault();
+  
+        const formData = new FormData(form);
+  
+        try {
+          const response = await fetch("/contacto/formulario.php", {
+            method: "POST",
+            body: formData,
+          });
+  
+          if (response.ok) {
+            notificationMessage.textContent = "¡Mensaje enviado con éxito!";
+            notification.classList.remove("hidden");
+            notification.classList.add("bg-green-200", "text-green-800");
+          } else {
+            notificationMessage.textContent = "Hubo un problema al enviar tu mensaje. Intenta de nuevo más tarde.";
+            notification.classList.remove("hidden");
+            notification.classList.add("bg-red-200", "text-red-800");
+          }
+        } catch (error) {
+          notificationMessage.textContent = "Error en el envío del formulario.";
+          notification.classList.remove("hidden");
+          notification.classList.add("bg-red-200", "text-red-800");
+        }
+  
+        setTimeout(() => {
+          notification.classList.add("hidden"); // Ocultar la notificación después de 5 segundos
+        }, 5000);
+      });
+    });
+  </script>
+  
+  
